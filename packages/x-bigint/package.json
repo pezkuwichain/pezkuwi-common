@@ -1,0 +1,26 @@
+{
+  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
+  "description": "A cross-environment BigInt replacement",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/pezkuwichain/pezkuwi-common/tree/master/packages/x-bigint#readme",
+  "license": "Apache-2.0",
+  "name": "@pezkuwi/x-bigint",
+  "repository": {
+    "directory": "packages/x-bigint",
+    "type": "git",
+    "url": "https://github.com/pezkuwichain/pezkuwi-common.git"
+  },
+  "sideEffects": [
+    "./shim.js",
+    "./shim.cjs"
+  ],
+  "type": "module",
+  "version": "14.0.1",
+  "dependencies": {
+    "@pezkuwi/x-global": "14.0.1",
+    "tslib": "^2.8.0"
+  }
+}

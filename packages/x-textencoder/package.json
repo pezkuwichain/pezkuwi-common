@@ -1,0 +1,26 @@
+{
+  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
+  "description": "A TextDecoder replacement",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/pezkuwichain/pezkuwi-common/tree/master/packages/x-textencoder#readme",
+  "license": "Apache-2.0",
+  "name": "@pezkuwi/x-textencoder",
+  "repository": {
+    "directory": "packages/x-textencoder",
+    "type": "git",
+    "url": "https://github.com/pezkuwichain/pezkuwi-common.git"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "14.0.1",
+  "browser": "browser.js",
+  "main": "node.js",
+  "react-native": "react-native.js",
+  "dependencies": {
+    "@pezkuwi/x-global": "14.0.1",
+    "tslib": "^2.8.0"
+  }
+}

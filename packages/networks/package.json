@@ -1,0 +1,28 @@
+{
+  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
+  "description": "A list of all available Substrate networks and their applicable prefixes",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/pezkuwichain/pezkuwi-common/tree/master/packages/networks#readme",
+  "license": "Apache-2.0",
+  "name": "@pezkuwi/networks",
+  "repository": {
+    "directory": "packages/networks",
+    "type": "git",
+    "url": "https://github.com/pezkuwichain/pezkuwi-common.git"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "14.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "@pezkuwi/util": "14.0.1",
+    "@substrate/ss58-registry": "^1.51.0",
+    "tslib": "^2.8.0"
+  },
+  "devDependencies": {
+    "@pezkuwi/hw-ledger": "14.0.1"
+  }
+}

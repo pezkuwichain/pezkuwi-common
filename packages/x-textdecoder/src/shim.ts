@@ -1,0 +1,7 @@
+// Copyright 2017-2025 @polkadot/x-textdecoder authors & contributors
+// SPDX-License-Identifier: Apache-2.0
+
+import { exposeGlobal } from '@pezkuwi/x-global';
+import { TextDecoder } from '@pezkuwi/x-textdecoder';
+
+exposeGlobal('TextDecoder', TextDecoder);

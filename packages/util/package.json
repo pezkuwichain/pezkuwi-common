@@ -1,0 +1,49 @@
+{
+  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
+  "description": "A collection of useful utilities for @pezkuwi",
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/pezkuwichain/pezkuwi-common/tree/master/packages/util#readme",
+  "license": "Apache-2.0",
+  "name": "@pezkuwi/util",
+  "repository": {
+    "directory": "packages/util",
+    "type": "git",
+    "url": "https://github.com/pezkuwichain/pezkuwi-common.git"
+  },
+  "sideEffects": [
+    "./packageDetect.js",
+    "./packageDetect.cjs"
+  ],
+  "type": "module",
+  "version": "14.0.1",
+  "main": "index.js",
+  "exports": {
+    "./hex/toU8a": {
+      "node": {
+        "require": "./cjs/hex/toU8aBuffer.js",
+        "default": "./hex/toU8aBuffer.js"
+      }
+    },
+    "./u8a/toHex": {
+      "node": {
+        "require": "./cjs/u8a/toHexBuffer.js",
+        "default": "./u8a/toHexBuffer.js"
+      }
+    }
+  },
+  "dependencies": {
+    "@pezkuwi/x-bigint": "14.0.1",
+    "@pezkuwi/x-global": "14.0.1",
+    "@pezkuwi/x-textdecoder": "14.0.1",
+    "@pezkuwi/x-textencoder": "14.0.1",
+    "@types/bn.js": "^5.1.6",
+    "bn.js": "^5.2.1",
+    "tslib": "^2.8.0"
+  },
+  "devDependencies": {
+    "@pezkuwi/x-randomvalues": "14.0.1"
+  }
+}

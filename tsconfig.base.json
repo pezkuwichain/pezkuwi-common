@@ -1,0 +1,35 @@
+{
+  "extends": "@pezkuwi/dev/config/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "@pezkuwi/hw-ledger": ["hw-ledger/src/index.ts"],
+      "@pezkuwi/hw-ledger/packageInfo": ["hw-ledger/src/packageInfo.ts"],
+      "@pezkuwi/hw-ledger/*": ["hw-ledger/src/*.ts"],
+      "@pezkuwi/hw-ledger-transports": ["hw-ledger-transports/src/browser.ts"],
+      "@pezkuwi/hw-ledger-transports/packageInfo": ["hw-ledger-transports/src/packageInfo.ts"],
+      "@pezkuwi/hw-ledger-transports/types": ["hw-ledger-transports/src/types.ts"],
+      "@pezkuwi/hw-ledger-transports/*": ["hw-ledger-transports/src/browser.ts"],
+      "@pezkuwi/keyring": ["keyring/src/index.ts"],
+      "@pezkuwi/keyring/packageInfo": ["keyring/src/packageInfo.ts"],
+      "@pezkuwi/networks": ["networks/src/index.ts"],
+      "@pezkuwi/networks/packageInfo": ["networks/src/packageInfo.ts"],
+      "@pezkuwi/util-crypto": ["util-crypto/src/index.ts"],
+      "@pezkuwi/util-crypto/packageInfo": ["util-crypto/src/packageInfo.ts"],
+      "@pezkuwi/util-crypto/*": ["util-crypto/src/*.ts"],
+      "@pezkuwi/util": ["util/src/index.ts"],
+      "@pezkuwi/util/packageInfo": ["util/src/packageInfo.ts"],
+      "@pezkuwi/util/test": ["util/src/test/index.ts"],
+      "@pezkuwi/util/*": ["util/src/*.ts"],
+      "@pezkuwi/x-bundle/*": ["x-bundle/src/*.ts"],
+      "@pezkuwi/x-bigint": ["x-bigint/src/index.ts"],
+      "@pezkuwi/x-bigint/shim": ["x-bigint/src/shim.ts"],
+      "@pezkuwi/x-fetch": ["x-fetch/src/browser.ts"],
+      "@pezkuwi/x-global": ["x-global/src/index.ts"],
+      "@pezkuwi/x-randomvalues": ["x-randomvalues/src/browser.ts"],
+      "@pezkuwi/x-textdecoder": ["x-textdecoder/src/browser.ts"],
+      "@pezkuwi/x-textencoder": ["x-textencoder/src/browser.ts"],
+      "@pezkuwi/x-ws": ["x-ws/src/browser.ts"]
+    }
+  }
+ }
