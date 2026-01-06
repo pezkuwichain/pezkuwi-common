@@ -1,22 +1,22 @@
-// Copyright 2017-2025 @polkadot/util authors & contributors
+// Copyright 2017-2025 @pezkuwi/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 import { detectPackage, POLKADOTJS_DISABLE_ESM_CJS_WARNING_FLAG } from './detectPackage.js';
 
 describe('detectPackage', (): void => {
-  const PKG = '@polkadot/util';
+  const PKG = '@pezkuwi/util';
   const VER1 = '9.8.0-beta.45';
   const VER2 = '9.7.1';
   const VER3 = '9.6.1';
-  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@polkadot/util';
+  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@pezkuwi/util';
 
-  const MISMATCH = `@polkadot/util has multiple versions, ensure that there is only one installed.
+  const MISMATCH = `@pezkuwi/util has multiple versions, ensure that there is only one installed.
 Either remove and explicitly install matching versions or dedupe using your package manager.
 The following conflicting packages were found:
 \tesm ${VER1}\t<unknown>
-\tesm ${VER2}        \tnode_modules/@polkadot/api/node_modules/@polkadot/util`;
+\tesm ${VER2}        \tnode_modules/@pezkuwi/api/node_modules/@pezkuwi/util`;
 
   it('should not log the first time', (): void => {
     const spy = jest.spyOn(console, 'warn');
@@ -29,7 +29,7 @@ The following conflicting packages were found:
   it('should log the second time', (): void => {
     const spy = jest.spyOn(console, 'warn');
 
-    detectPackage({ name: PKG, path: '/Users/jaco/Projects/polkadot-js/api/node_modules/@polkadot/api/node_modules/@polkadot/util', type: 'esm', version: VER2 });
+    detectPackage({ name: PKG, path: '/Users/jaco/Projects/polkadot-js/api/node_modules/@pezkuwi/api/node_modules/@pezkuwi/util', type: 'esm', version: VER2 });
     expect(spy).toHaveBeenCalledWith(MISMATCH);
     spy.mockRestore();
   });
@@ -37,23 +37,23 @@ The following conflicting packages were found:
   it('should allow for function use', (): void => {
     const spy = jest.spyOn(console, 'warn');
 
-    detectPackage({ name: PKG, path: 'node_modules/@polkadot/util', type: 'cjs', version: VER3 }, () => PATH);
+    detectPackage({ name: PKG, path: 'node_modules/@pezkuwi/util', type: 'cjs', version: VER3 }, () => PATH);
     expect(spy).toHaveBeenCalledWith(`${MISMATCH}
-\tcjs ${VER3}        \tnode_modules/@polkadot/util`);
+\tcjs ${VER3}        \tnode_modules/@pezkuwi/util`);
     spy.mockRestore();
   });
 });
 
 describe('detectPackageDeps', (): void => {
-  const DEP0 = { name: '@polkadot/keyring', path: 'auto', type: 'esm', version: '1.1.1' };
-  const DEP1 = { name: '@polkadot/util', path: 'auto', type: 'esm', version: '1.1.2' };
-  const DEP2 = { name: '@polkadot/util-crypto', path: 'auto', type: 'esm', version: '1.1.3' };
-  const DEP3 = { name: '@polkadot/networks', path: 'auto', type: 'esm', version: '1.1.1' };
+  const DEP0 = { name: '@pezkuwi/keyring', path: 'auto', type: 'esm', version: '1.1.1' };
+  const DEP1 = { name: '@pezkuwi/util', path: 'auto', type: 'esm', version: '1.1.2' };
+  const DEP2 = { name: '@pezkuwi/util-crypto', path: 'auto', type: 'esm', version: '1.1.3' };
+  const DEP3 = { name: '@pezkuwi/networks', path: 'auto', type: 'esm', version: '1.1.1' };
 
   it('should not log when no mismatches are found', (): void => {
     const spy = jest.spyOn(console, 'warn');
 
-    detectPackage({ name: '@polkadot/one', path: 'auto', type: 'esm', version: '1.1.1' }, false, [DEP0, DEP3]);
+    detectPackage({ name: '@pezkuwi/one', path: 'auto', type: 'esm', version: '1.1.1' }, false, [DEP0, DEP3]);
     expect(spy).not.toHaveBeenCalled();
     spy.mockRestore();
   });
@@ -61,20 +61,20 @@ describe('detectPackageDeps', (): void => {
   it('should log when mismatches are found', (): void => {
     const spy = jest.spyOn(console, 'warn');
 
-    detectPackage({ name: '@polkadot/two', path: 'auto', type: 'esm', version: '1.1.1' }, false, [DEP0, DEP1, DEP2, DEP3]);
-    expect(spy).toHaveBeenCalledWith(`@polkadot/two requires direct dependencies exactly matching version 1.1.1.
+    detectPackage({ name: '@pezkuwi/two', path: 'auto', type: 'esm', version: '1.1.1' }, false, [DEP0, DEP1, DEP2, DEP3]);
+    expect(spy).toHaveBeenCalledWith(`@pezkuwi/two requires direct dependencies exactly matching version 1.1.1.
 Either remove and explicitly install matching versions or dedupe using your package manager.
 The following conflicting packages were found:
-\t1.1.2\t@polkadot/util
-\t1.1.3\t@polkadot/util-crypto`);
+\t1.1.2\t@pezkuwi/util
+\t1.1.3\t@pezkuwi/util-crypto`);
     spy.mockRestore();
   });
 });
 
 describe('detectPackageEsmCjsNoWarnings', (): void => {
-  const PKG = '@polkadot/wasm-crypto';
+  const PKG = '@pezkuwi/wasm-crypto';
   const VER1 = '9.8.0-beta.45';
-  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@polkadot/api/node_modules/@polkadot/wasm-crypto';
+  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@pezkuwi/api/node_modules/@pezkuwi/wasm-crypto';
 
   it('should not log when there are concurrent esm and cjs versions of the same package with the same version number and warnings are disabled', (): void => {
     const spy = jest.spyOn(console, 'warn');
@@ -91,9 +91,9 @@ describe('detectPackageEsmCjsNoWarnings', (): void => {
 });
 
 describe('detectPackageEsmCjs', (): void => {
-  const PKG = '@polkadot/wasm-crypto-wasm';
+  const PKG = '@pezkuwi/wasm-crypto-wasm';
   const VER1 = '9.8.0-beta.45';
-  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@polkadot/api/node_modules/@polkadot/wasm-crypto-wasm';
+  const PATH = '/Users/jaco/Projects/polkadot-js/api/node_modules/@pezkuwi/api/node_modules/@pezkuwi/wasm-crypto-wasm';
 
   it('should log when there are concurrent esm and cjs versions of the same package with the same version number and warnings are not disabled', (): void => {
     const spy = jest.spyOn(console, 'warn');

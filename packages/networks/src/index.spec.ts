@@ -1,9 +1,9 @@
-// Copyright 2017-2025 @polkadot/networks authors & contributors
+// Copyright 2017-2025 @pezkuwi/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
-import type { SubstrateNetwork } from './types.js';
+import type { BizinikwiNetwork } from './types.js';
 
 import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/index.js';
 import { allNetworks, availableNetworks, selectableNetworks } from './index.js';
@@ -93,8 +93,8 @@ describe('availableNetworks', (): void => {
 
 describe('allNetworks', (): void => {
   it('has no ss58 duplicates', (): void => {
-    const dupes: SubstrateNetwork[] = [];
-    const uniques: SubstrateNetwork[] = [];
+    const dupes: BizinikwiNetwork[] = [];
+    const uniques: BizinikwiNetwork[] = [];
 
     allNetworks.forEach((a): void => {
       if (uniques.some((u) => u.prefix === a.prefix)) {

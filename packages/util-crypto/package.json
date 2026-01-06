@@ -20,7 +20,7 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "14.0.2",
+  "version": "14.0.7",
   "browser": {
     "crypto": false,
     "stream": false
@@ -31,8 +31,8 @@
     "@noble/hashes": "^1.3.3",
     "@pezkuwi/networks": "14.0.1",
     "@pezkuwi/util": "14.0.1",
-    "@polkadot/wasm-crypto": "^7.5.3",
-    "@polkadot/wasm-util": "^7.5.3",
+    "@pezkuwi/wasm-crypto": "^7.5.4",
+    "@pezkuwi/wasm-util": "^7.5.4",
     "@pezkuwi/x-bigint": "14.0.1",
     "@pezkuwi/x-randomvalues": "14.0.1",
     "@scure/base": "^1.1.7",

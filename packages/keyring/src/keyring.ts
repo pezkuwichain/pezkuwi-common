@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/keyring authors & contributors
+// Copyright 2017-2025 @pezkuwi/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { EncryptedJsonEncoding, Keypair, KeypairType } from '@pezkuwi/util-crypto/types';
@@ -23,7 +23,7 @@ function pairToPublic ({ publicKey }: KeyringPair): Uint8Array {
 }
 
 /**
- * # @polkadot/keyring
+ * # @pezkuwi/keyring
  *
  * ## Overview
  *

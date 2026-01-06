@@ -1,9 +1,9 @@
-// Copyright 2017-2025 @polkadot/networks authors & contributors
+// Copyright 2017-2025 @pezkuwi/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { KnownLedger } from '../types.js';
 
-// These match up with the keys of the ledgerApps object in the @polkadot/hw-ledger/defaults.ts
+// These match up with the keys of the ledgerApps object in the @pezkuwi/hw-ledger/defaults.ts
 // and maps to the known slip44 (minus the `0x8` hard derivation flag)
 //
 // NOTE: Any network here needs to have a genesisHash attached in the ./genesis.ts config

@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @polkadot/util authors & contributors
+// Copyright 2017-2025 @pezkuwi/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 import { TESTS } from '../bi/sqrt.spec.js';
 import { BN, BN_SQRT_MAX_INTEGER, bnSqrt } from './index.js';

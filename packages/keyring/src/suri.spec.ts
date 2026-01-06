@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @polkadot/keyring authors & contributors
+// Copyright 2017-2025 @pezkuwi/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 // From https://github.com/paritytech/substrate/wiki/Secret-URI-Test-Vectors
 

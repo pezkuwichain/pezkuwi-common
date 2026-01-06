@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @polkadot/util-crypto authors & contributors
+// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 import { base32Decode } from '../base32/index.js';
 import { base58Decode } from './index.js';

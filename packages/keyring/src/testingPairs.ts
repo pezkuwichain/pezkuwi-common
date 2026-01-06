@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/keyring authors & contributors
+// Copyright 2017-2025 @pezkuwi/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { KeypairType } from '@pezkuwi/util-crypto/types';
@@ -13,7 +13,7 @@ export interface TestKeyringMap {
   [index: string]: KeyringPair;
 }
 
-export interface TestKeyringMapSubstrate extends TestKeyringMap {
+export interface TestKeyringMapBizinikiwi extends TestKeyringMap {
   alice: KeyringPair;
   bob: KeyringPair;
   charlie: KeyringPair;
@@ -33,7 +33,7 @@ export interface TestKeyringMapEthereum extends TestKeyringMap {
 
 export type DetectMap<O extends KeyringOptions | undefined> = DetectPairType<O> extends 'ethereum'
   ? TestKeyringMapEthereum
-  : TestKeyringMapSubstrate;
+  : TestKeyringMapBizinikiwi;
 
 export type DetectPairType<O extends KeyringOptions | undefined> = O extends KeyringOptions
   ? O['type'] extends KeypairType

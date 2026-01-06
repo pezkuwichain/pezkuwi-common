@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @polkadot/keyring authors & contributors
+// Copyright 2017-2025 @pezkuwi/keyring authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 import { u8aToHex } from '@pezkuwi/util';
 import { cryptoWaitReady, ed25519PairFromSeed, encodeAddress as toSS58, randomAsU8a, secp256k1PairFromSeed, sr25519PairFromSeed } from '@pezkuwi/util-crypto';

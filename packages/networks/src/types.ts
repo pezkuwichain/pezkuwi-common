@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/keyring authors & contributors
+// Copyright 2017-2025 @pezkuwi/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { RegistryEntry } from '@substrate/ss58-registry';
@@ -12,11 +12,11 @@ export type KnownLedger = Record<string, number>;
 
 export type KnownGenesis = Record<string, HexString[]>;
 
-export type KnownSubstrate = RegistryEntry;
+export type KnownBizinikiwi = RegistryEntry;
 
 export type KnownTestnet = Record<string, true>;
 
-export interface SubstrateNetwork extends KnownSubstrate {
+export interface BizinikwiNetwork extends KnownBizinikiwi {
   /** The genesisHash for the chain */
   genesisHash: HexString[];
   /** Does the chain has support for Ledger devices */
@@ -31,13 +31,13 @@ export interface SubstrateNetwork extends KnownSubstrate {
   slip44?: number | null;
 }
 
-export interface Network extends SubstrateNetwork {
+export interface Network extends BizinikwiNetwork {
   /** The network assigned to this chain */
   network: string;
 }
 
 export interface Ss58Registry {
-  registry: KnownSubstrate[];
+  registry: KnownBizinikiwi[];
   specification: string;
-  schema: Record<keyof KnownSubstrate, string>;
+  schema: Record<keyof KnownBizinikiwi, string>;
 }

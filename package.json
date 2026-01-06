@@ -14,30 +14,30 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.1",
+  "version": "14.0.7",
   "versions": {
-    "git": "14.0.1",
-    "npm": "14.0.1"
+    "git": "14.0.6",
+    "npm": "14.0.6"
   },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "polkadot-dev-build-ts",
-    "build:networks": "polkadot-dev-run-test packages/networks/src",
-    "build:release": "polkadot-ci-ghact-build",
-    "build:rollup": "polkadot-exec-rollup --config",
-    "clean": "polkadot-dev-clean-build",
-    "deno": "yarn polkadot-dev-deno-map && yarn build && deno check --import-map=import_map.json mod.ts",
-    "lint": "polkadot-dev-run-lint",
-    "postinstall": "polkadot-dev-yarn-only",
-    "test": "polkadot-dev-run-test --env browser ^mnemonic/toMiniSecretCmp",
-    "test:mnemonicCmp": "polkadot-dev-run-test --env browser mnemonic/toMiniSecretCmp",
-    "test:node": "polkadot-dev-run-test --env browser ^mnemonic/toMiniSecretCmp",
-    "test:one": "polkadot-dev-run-test --env browser"
+    "build": "pezkuwi-dev-build-ts",
+    "build:networks": "pezkuwi-dev-run-test packages/networks/src",
+    "build:release": "pezkuwi-ci-ghact-build",
+    "build:rollup": "pezkuwi-exec-rollup --config",
+    "clean": "pezkuwi-dev-clean-build",
+    "deno": "yarn pezkuwi-dev-deno-map && yarn build && deno check --import-map=import_map.json mod.ts",
+    "lint": "pezkuwi-dev-run-lint",
+    "postinstall": "pezkuwi-dev-yarn-only",
+    "test": "pezkuwi-dev-run-test --env browser ^mnemonic/toMiniSecretCmp",
+    "test:mnemonicCmp": "pezkuwi-dev-run-test --env browser mnemonic/toMiniSecretCmp",
+    "test:node": "pezkuwi-dev-run-test --env browser ^mnemonic/toMiniSecretCmp",
+    "test:one": "pezkuwi-dev-run-test --env browser"
   },
   "devDependencies": {
-    "@polkadot/dev": "^0.83.3",
+    "@pezkuwi/dev": "^0.85.2",
     "@types/node": "^22.7.5"
   },
   "resolutions": {

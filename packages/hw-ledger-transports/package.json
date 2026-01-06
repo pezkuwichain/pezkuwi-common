@@ -14,7 +14,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.1",
+  "version": "14.0.7",
   "browser": "browser.js",
   "main": "node.js",
   "react-native": "react-native.js",

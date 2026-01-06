@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/util authors & contributors
+// Copyright 2017-2025 @pezkuwi/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { xglobal } from '@pezkuwi/x-global';
@@ -107,10 +107,10 @@ function warn <T extends { version: string }> (pre: string, all: T[], fmt: (vers
 /**
  * @name detectPackage
  * @summary Checks that a specific package is only imported once
- * @description A `@polkadot/*` version detection utility, checking for one occurrence of a package in addition to checking for dependency versions.
+ * @description A `@pezkuwi/*` version detection utility, checking for one occurrence of a package in addition to checking for dependency versions.
  */
 export function detectPackage ({ name, path, type, version }: PackageInfo, pathOrFn?: FnString | string | false | null, deps: PackageInfo[] = []): void {
-  if (!name.startsWith('@polkadot')) {
+  if (!name.startsWith('@pezkuwi')) {
     throw new Error(`Invalid package descriptor ${name}`);
   }
 

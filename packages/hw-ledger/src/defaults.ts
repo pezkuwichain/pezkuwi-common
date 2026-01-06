@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/hw-ledger authors & contributors
+// Copyright 2017-2025 @pezkuwi/hw-ledger authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // These map to the known name in the @zondax/ledger-substrate/supported_apps package
@@ -62,7 +62,7 @@ export const genericLedgerApps = {
   vara: 'Vara'
 };
 
-// These match up with the keys of the knownLedger object in the @polkadot/networks/defaults/ledger.ts
+// These match up with the keys of the knownLedger object in the @pezkuwi/networks/defaults/ledger.ts
 export const ledgerApps: Record<string, string> = {
   ...prevLedgerRecord,
   ...genericLedgerApps

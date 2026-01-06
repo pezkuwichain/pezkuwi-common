@@ -15,7 +15,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.1",
+  "version": "14.0.7",
   "main": "index.js",
   "dependencies": {
     "@pezkuwi/util": "14.0.1",

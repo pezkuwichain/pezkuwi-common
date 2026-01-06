@@ -1,9 +1,9 @@
-// Copyright 2017-2025 @polkadot/networks authors & contributors
+// Copyright 2017-2025 @pezkuwi/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { KnownSubstrate, Network, SubstrateNetwork } from './types.js';
+import type { KnownBizinikiwi, Network, BizinikwiNetwork } from './types.js';
 
-import knownSubstrate from '@substrate/ss58-registry';
+import knownBizinikiwi from '@substrate/ss58-registry';
 
 import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/index.js';
 
@@ -11,10 +11,10 @@ import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/i
 const UNSORTED = [0, 2, 42];
 const TESTNETS = ['testnet'];
 
-function toExpanded (o: KnownSubstrate): SubstrateNetwork {
+function toExpanded (o: KnownBizinikiwi): BizinikwiNetwork {
   const network = o.network || '';
   const nameParts = network.replace(/_/g, '-').split('-');
-  const n = o as SubstrateNetwork;
+  const n = o as BizinikwiNetwork;
 
   // ledger additions
   n.slip44 = knownLedger[network];
@@ -42,7 +42,7 @@ function filterSelectable ({ genesisHash, prefix }: Network): boolean {
   return !!genesisHash.length || prefix === 42;
 }
 
-function filterAvailable (n: SubstrateNetwork): n is Network {
+function filterAvailable (n: BizinikwiNetwork): n is Network {
   return !n.isIgnored && !!n.network;
 }
 
@@ -59,8 +59,8 @@ function sortNetworks (a: Network, b: Network): number {
       : 1;
 }
 
-// This is all the Substrate networks with our additional information
-export const allNetworks = knownSubstrate.map(toExpanded);
+// This is all the Bizinikiwi networks with our additional information
+export const allNetworks = knownBizinikiwi.map(toExpanded);
 
 // The list of available/claimed prefixes
 //   - no testnets

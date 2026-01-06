@@ -18,7 +18,7 @@
     "./shim.cjs"
   ],
   "type": "module",
-  "version": "14.0.1",
+  "version": "14.0.7",
   "dependencies": {
     "@pezkuwi/x-global": "14.0.1",
     "tslib": "^2.8.0"

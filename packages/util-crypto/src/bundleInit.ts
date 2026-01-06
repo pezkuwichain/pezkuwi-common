@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @polkadot/util-crypto authors & contributors
+// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import '@polkadot/x-bigint/shim';
+import '@pezkuwi/x-bigint/shim';
 
 import { cryptoWaitReady } from './crypto.js';
 

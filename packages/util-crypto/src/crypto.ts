@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/util-crypto authors & contributors
+// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { isReady, waitReady } from '@pezkuwi/wasm-crypto';
@@ -9,7 +9,7 @@ export function cryptoWaitReady (): Promise<boolean> {
   return waitReady()
     .then((): boolean => {
       if (!isReady()) {
-        throw new Error('Unable to initialize @polkadot/util-crypto');
+        throw new Error('Unable to initialize @pezkuwi/util-crypto');
       }
 
       return true;
