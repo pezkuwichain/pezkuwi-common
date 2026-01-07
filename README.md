@@ -1,31 +1,91 @@
 # @pezkuwi/common
 
-Various useful utility functions that are used across all projects in the [@pezkuwi](https://pezkuwi.js.org) namespace. It provides utility functions with additional safety checks, allowing not only for consistent coding, but also reducing the general boilerplate.
+Common utilities, cryptographic functions, and keyring management for PezkuwiChain applications.
 
-## overview
+**Developed by Dijital Kurdistan Tech Institute**
 
-This repository is split up into a number of internal packages, namely utilities -
+## Overview
 
-- [keyring](packages/keyring/) Keyring management
-- [util](packages/util/) General utilities
-- [util-crypto](packages/util-crypto/) Crypto and hashing utilities
+This repository provides utility functions with additional safety checks, allowing for consistent coding and reducing boilerplate across all [@pezkuwi](https://github.com/pezkuwichain) packages.
 
-## development
+## Packages
 
-Contributions are welcome!
+| Package | Description |
+|---------|-------------|
+| [@pezkuwi/keyring](packages/keyring/) | Keyring management for accounts |
+| [@pezkuwi/util](packages/util/) | General utility functions |
+| [@pezkuwi/util-crypto](packages/util-crypto/) | Cryptographic and hashing utilities |
+| [@pezkuwi/networks](packages/networks/) | Network definitions |
+| [@pezkuwi/x-bigint](packages/x-bigint/) | BigInt polyfills |
+| [@pezkuwi/x-fetch](packages/x-fetch/) | Fetch polyfills |
+| [@pezkuwi/x-global](packages/x-global/) | Global object utilities |
+| [@pezkuwi/x-randomvalues](packages/x-randomvalues/) | Random values polyfills |
+| [@pezkuwi/x-textdecoder](packages/x-textdecoder/) | TextDecoder polyfills |
+| [@pezkuwi/x-textencoder](packages/x-textencoder/) | TextEncoder polyfills |
+| [@pezkuwi/x-ws](packages/x-ws/) | WebSocket polyfills |
 
-To start off, this repo (along with others in the [@pezkuwi](https://github.com/polkadot-js/) family) uses yarn workspaces to organise the code. As such, after cloning, its dependencies _should_ be installed via `yarn`, not via npm; the latter will result in broken dependencies.
+## Installation
 
-To get started -
+```bash
+# Keyring
+npm install @pezkuwi/keyring
 
-1. Clone the repo locally, via `git clone https://github.com/pezkuwichain/pezkuwi-common <optional local path>`
-2. Ensure that you have a recent version of Node.js, for development purposes [Node 10](https://nodejs.org/en/) is recommended.
-3. Ensure that you have a recent version of Yarn, for development purposes [Yarn >=1.10.1](https://yarnpkg.com/docs/install) is required.
-4. Install the dependencies by running `yarn`
-5. Build the everything via `yarn run build`
-6. You can also launch the API Docs, via `yarn vuepress dev docs`
-7. Access the docs via [http://localhost:8080](http://localhost:8080)
+# Utilities
+npm install @pezkuwi/util
 
-## tutorials
+# Crypto utilities
+npm install @pezkuwi/util-crypto
+```
 
-Looking for tutorials to get started? Look at [examples](https://pezkuwi.js.org/api/examples/keyring/) for guides on how to use the base utilities.
+## Quick Start
+
+```javascript
+import { Keyring } from '@pezkuwi/keyring';
+import { hexToU8a, u8aToHex } from '@pezkuwi/util';
+import { mnemonicGenerate, blake2AsHex } from '@pezkuwi/util-crypto';
+
+// Generate a mnemonic
+const mnemonic = mnemonicGenerate();
+
+// Create a keyring and add account
+const keyring = new Keyring({ type: 'sr25519' });
+const pair = keyring.addFromMnemonic(mnemonic);
+
+console.log(`Address: ${pair.address}`);
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js >= 18.14
+- Yarn 4.x (via corepack)
+
+### Building
+
+```bash
+git clone https://github.com/pezkuwichain/pezkuwi-common
+cd pezkuwi-common
+corepack enable
+yarn install
+yarn build
+```
+
+## Tutorials
+
+Looking for tutorials? Check out [examples](https://js.pezkuwichain.app/docs/keyring/) for guides on how to use these utilities.
+
+## Links
+
+- Website: https://pezkuwichain.io
+- Documentation: https://docs.pezkuwichain.io
+- API Docs: https://js.pezkuwichain.app
+- GitHub: https://github.com/pezkuwichain
+
+## License
+
+Apache-2.0
+
+## Author
+
+Dijital Kurdistan Tech Institute
