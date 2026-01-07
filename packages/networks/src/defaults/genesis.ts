@@ -107,6 +107,10 @@ export const knownGenesis: KnownGenesis = {
     '0xe3777fa922cafbff200cadeaea1a76bd7898ad5b89f7848999058b50e715f636', // Kusama CC2
     '0x3fd7b9eb6a00376e5be61f01abb429ffb0b104be05eaff4d458da48fcd425baf' // Kusama CC1
   ],
+  // Dicle - Pezkuwi canary relay chain (placeholder until mainnet launch)
+  dicle: [
+    '0xd9d3cd7c1e5d890d969b957f4c5b71a111bbeeabc968f1d0d4538c2663f080a7'
+  ],
   liberland: [
     '0x6bd89e052d67a45bb60a9a23e8581053d5e0d619f15cb9865946937e690c42d6'
   ],
@@ -150,6 +154,10 @@ export const knownGenesis: KnownGenesis = {
   polkadot: [
     '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'
   ],
+  // Pezkuwi - Pezkuwi main relay chain (placeholder until mainnet launch)
+  pezkuwi: [
+    '0x41693961995d879073269a008d0a52832caa3e0ae73869f02127f3d5daa4934c'
+  ],
   polymesh: [
     '0x6fbd74e5e1d0a61d52ccfe9d4adaed16dd3a7caa37c6bc4d0c2fa12e8b2f4063'
   ],
@@ -169,6 +177,10 @@ export const knownGenesis: KnownGenesis = {
     '0x78bcd530c6b3a068bc17473cf5d2aff9c287102bed9af3ae3c41c33b9d6c6147',
     '0x47381ee0697153d64404fc578392c8fd5cba9073391908f46c888498415647bd',
     '0x19c0e4fa8ab75f5ac7865e0b8f74ff91eb9a100d336f423cd013a8befba40299'
+  ],
+  // PezkuwiChain - Pezkuwi dev relay chain (placeholder until devnet launch)
+  pezkuwichain: [
+    '0x32154fd2c844f928c82964ff66168b41b15fc235f3a956d14393734c1ed4326b'
   ],
   sora: [
     '0x7e4e32d0feafd4f9c9414b0be86373f9a1efa904809b683453a9af6856d38ad5'
@@ -200,6 +212,10 @@ export const knownGenesis: KnownGenesis = {
   ],
   westend: [
     '0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e'
+  ],
+  // Zagros - Pezkuwi test relay chain (placeholder until testnet launch)
+  zagros: [
+    '0x297f5a4d105b4b28312586ff1915572ffe4ee015ff772b76399ecbff25a22026'
   ],
   xxnetwork: [
     '0x50dd5d206917bf10502c68fb4d18a59fc8aa31586f4e8856b493e43544aa82aa'
