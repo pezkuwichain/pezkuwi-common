@@ -17,7 +17,7 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "14.0.8",
+  "version": "14.0.10",
   "main": "index.js",
   "dependencies": {
     "@pezkuwi/hw-ledger-transports": "workspace:*",
