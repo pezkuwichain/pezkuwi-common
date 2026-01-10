@@ -3,13 +3,50 @@
 
 import type { KnownBizinikiwi, Network, BizinikwiNetwork } from './types.js';
 
-import knownBizinikiwi from '@substrate/ss58-registry';
-
 import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/index.js';
 
 // These are known prefixes that are not sorted
 const UNSORTED = [0, 2, 42];
 const TESTNETS = ['testnet'];
+
+const customNetworks: KnownBizinikiwi[] = [
+  {
+    decimals: [10],
+    displayName: 'Pezkuwi Relay Chain',
+    network: 'pezkuwi',
+    prefix: 0,
+    standardAccount: '*25519',
+    symbols: ['PZW'],
+    website: 'https://pezkuwi.com'
+  },
+  {
+    decimals: [12],
+    displayName: 'Zagros Relay Chain',
+    network: 'zagros',
+    prefix: 2,
+    standardAccount: '*25519',
+    symbols: ['ZGS'],
+    website: 'https://zagros.pezkuwi.com'
+  },
+  {
+    decimals: [12],
+    displayName: 'Bizinikiwi',
+    network: 'bizinikiwi',
+    prefix: 42,
+    standardAccount: '*25519',
+    symbols: ['BZN'],
+    website: 'https://bizinikiwi.com'
+  },
+  {
+    decimals: [18],
+    displayName: 'PezkuwiChain',
+    network: 'pezkuwichain',
+    prefix: 1453,
+    standardAccount: '*25519',
+    symbols: ['PZC'],
+    website: 'https://chain.pezkuwi.com'
+  }
+];
 
 function toExpanded (o: KnownBizinikiwi): BizinikwiNetwork {
   const network = o.network || '';
@@ -60,7 +97,7 @@ function sortNetworks (a: Network, b: Network): number {
 }
 
 // This is all the Bizinikiwi networks with our additional information
-export const allNetworks = knownBizinikiwi.map(toExpanded);
+export const allNetworks = customNetworks.map(toExpanded);
 
 // The list of available/claimed prefixes
 //   - no testnets

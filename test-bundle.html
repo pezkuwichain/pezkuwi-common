@@ -30,32 +30,32 @@
         document.body.appendChild(pre);
       }
     </script>
-    <script src="packages/util/build/bundle-polkadot-util.js"></script>
+    <script src="packages/util/build/bundle-pezkuwi-util.js"></script>
     <script>
-      log('polkadotUtil');
+      log('pezkuwiUtil');
 
-      const { bnToBn, u8aToHex } = polkadotUtil;
+      const { bnToBn, u8aToHex } = pezkuwiUtil;
 
       log('u8aToHex', u8aToHex(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8])));
       log('bnToBn', bnToBn(123).addn(1).toString());
     </script>
-    <script src="packages/util-crypto/build/bundle-polkadot-util-crypto.js"></script>
+    <script src="packages/util-crypto/build/bundle-pezkuwi-util-crypto.js"></script>
     <script>
-      log('polkadotUtilCrypto');
+      log('pezkuwiUtilCrypto');
 
-      const { blake2AsHex, randomAsHex, selectableNetworks } = polkadotUtilCrypto;
+      const { blake2AsHex, randomAsHex, selectableNetworks } = pezkuwiUtilCrypto;
 
       log('blake2AsHex', blake2AsHex(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8])));
       log('blake2AsHex (js)', blake2AsHex(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]), 256, null, true));
       log('randomAsHex', randomAsHex());
       log('selectableNetworks', selectableNetworks.map(({ displayName }) => displayName).join('; '));
     </script>
-    <script src="packages/keyring/build/bundle-polkadot-keyring.js"></script>
+    <script src="packages/keyring/build/bundle-pezkuwi-keyring.js"></script>
     <script>
-      log('polkadotKeyring');
+      log('pezkuwiKeyring');
 
-      const { Keyring } = polkadotKeyring;
-      const { cryptoWaitReady } = polkadotUtilCrypto;
+      const { Keyring } = pezkuwiKeyring;
+      const { cryptoWaitReady } = pezkuwiUtilCrypto;
 
       cryptoWaitReady().then(() => {
         const keyring = new Keyring({ type: 'sr25519' });

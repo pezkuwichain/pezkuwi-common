@@ -1,5 +1,5 @@
 {
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "author": "Pezkuwi Team <team@pezkuwichain.app>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
   "description": "A list of all available Bizinikiwi networks and their applicable prefixes",
   "engines": {
@@ -15,14 +15,14 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.7",
+  "version": "14.0.8",
   "main": "index.js",
   "dependencies": {
-    "@pezkuwi/util": "14.0.1",
+    "@pezkuwi/util": "workspace:*",
     "@substrate/ss58-registry": "^1.51.0",
     "tslib": "^2.8.0"
   },
   "devDependencies": {
-    "@pezkuwi/hw-ledger": "14.0.1"
+    "@pezkuwi/hw-ledger": "workspace:*"
   }
 }

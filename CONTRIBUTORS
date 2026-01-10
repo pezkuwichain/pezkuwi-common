@@ -26,7 +26,7 @@
        1	Alexander Krupenkin           	Added ECDSA keypair support (#589)
        1	alexdniep                     	added equilibrium slip44; added equilibrium genesis hash (#984)
        1	amphineko                     	chore: fix typo in versionDetect messages (#941)
-       1	Axel Chalon                   	Simplify @polkadot/keyring KeyringPair (#419)
+       1	Axel Chalon                   	Simplify @pezkuwi/keyring KeyringPair (#419)
        1	Brad Larson                   	[FIX] Adjust error message (#646)
        1	Carlos Medeiros               	add hydradx to knownLedger (#1647)
        1	Chris                         	Get rid of warnings for dual esm and cjs packages of the same version (#1890)

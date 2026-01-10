@@ -1,5 +1,5 @@
 {
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "author": "Pezkuwi Team <team@pezkuwichain.app>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
   "description": "A cross-environment BigInt replacement",
   "engines": {
@@ -18,9 +18,9 @@
     "./shim.cjs"
   ],
   "type": "module",
-  "version": "14.0.7",
+  "version": "14.0.8",
   "dependencies": {
-    "@pezkuwi/x-global": "14.0.1",
+    "@pezkuwi/x-global": "workspace:*",
     "tslib": "^2.8.0"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "author": "Pezkuwi Team <team@pezkuwichain.io>",
+  "author": "Pezkuwi Team <team@pezkuwichain.app>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
   "engines": {
     "node": ">=18.14"
@@ -14,10 +14,10 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.7",
+  "version": "14.0.8",
   "versions": {
-    "git": "14.0.6",
-    "npm": "14.0.6"
+    "git": "14.0.8",
+    "npm": "14.0.8"
   },
   "workspaces": [
     "packages/*"
@@ -37,10 +37,12 @@
     "test:one": "pezkuwi-dev-run-test --env browser"
   },
   "devDependencies": {
-    "@pezkuwi/dev": "^0.85.2",
+    "@pezkuwi/dev": "0.85.4",
     "@types/node": "^22.7.5"
   },
   "resolutions": {
+    "@pezkuwi/dev": "portal:../pezkuwi-dev/packages/dev",
+    "@pezkuwi/dev-test": "portal:../pezkuwi-dev/packages/dev-test",
     "typescript": "^5.5.4"
   }
 }
