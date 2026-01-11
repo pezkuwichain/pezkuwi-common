@@ -15,10 +15,132 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.10",
-  "main": "index.js",
+  "version": "14.0.11",
+  "main": "./cjs/index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "./cjs/package.json": "./cjs/package.json",
+    "./cjs/*": "./cjs/*.js",
+    ".": {
+      "module": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "require": {
+        "types": "./cjs/index.d.ts",
+        "default": "./cjs/index.js"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./buffer": {
+      "module": {
+        "types": "./buffer.d.ts",
+        "default": "./buffer.js"
+      },
+      "require": {
+        "types": "./cjs/buffer.d.ts",
+        "default": "./cjs/buffer.js"
+      },
+      "default": {
+        "types": "./buffer.d.ts",
+        "default": "./buffer.js"
+      }
+    },
+    "./crypto": {
+      "module": {
+        "types": "./crypto.d.ts",
+        "default": "./crypto.js"
+      },
+      "require": {
+        "types": "./cjs/crypto.d.ts",
+        "default": "./cjs/crypto.js"
+      },
+      "default": {
+        "types": "./crypto.d.ts",
+        "default": "./crypto.js"
+      }
+    },
+    "./dummy": {
+      "module": {
+        "types": "./dummy.d.ts",
+        "default": "./dummy.js"
+      },
+      "require": {
+        "types": "./cjs/dummy.d.ts",
+        "default": "./cjs/dummy.js"
+      },
+      "default": {
+        "types": "./dummy.d.ts",
+        "default": "./dummy.js"
+      }
+    },
+    "./empty": {
+      "module": {
+        "types": "./empty.d.ts",
+        "default": "./empty.js"
+      },
+      "require": {
+        "types": "./cjs/empty.d.ts",
+        "default": "./cjs/empty.js"
+      },
+      "default": {
+        "types": "./empty.d.ts",
+        "default": "./empty.js"
+      }
+    },
+    "./inherits": {
+      "module": {
+        "types": "./inherits.d.ts",
+        "default": "./inherits.js"
+      },
+      "require": {
+        "types": "./cjs/inherits.d.ts",
+        "default": "./cjs/inherits.js"
+      },
+      "default": {
+        "types": "./inherits.d.ts",
+        "default": "./inherits.js"
+      }
+    },
+    "./package.json": {
+      "require": "./cjs/package.json",
+      "default": "./package.json"
+    },
+    "./packageInfo.js": {
+      "module": {
+        "types": "./packageInfo.d.ts",
+        "default": "./packageInfo.js"
+      },
+      "require": {
+        "types": "./cjs/packageInfo.d.ts",
+        "default": "./cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./packageInfo.d.ts",
+        "default": "./packageInfo.js"
+      }
+    },
+    "./packageInfo": {
+      "module": {
+        "types": "./packageInfo.d.ts",
+        "default": "./packageInfo.js"
+      },
+      "require": {
+        "types": "./cjs/packageInfo.d.ts",
+        "default": "./cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./packageInfo.d.ts",
+        "default": "./packageInfo.js"
+      }
+    }
+  },
   "dependencies": {
-    "@pezkuwi/util": "workspace:*",
+    "@pezkuwi/util": "14.0.11",
     "buffer-es6": "^4.9.3",
     "tslib": "^2.8.0"
   }

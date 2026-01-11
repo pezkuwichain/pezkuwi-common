@@ -17,7 +17,7 @@ const customNetworks: KnownBizinikiwi[] = [
     prefix: 0,
     standardAccount: '*25519',
     symbols: ['PZW'],
-    website: 'https://pezkuwi.com'
+    website: 'https://pezkuwichain.io'
   },
   {
     decimals: [12],
@@ -26,7 +26,7 @@ const customNetworks: KnownBizinikiwi[] = [
     prefix: 2,
     standardAccount: '*25519',
     symbols: ['ZGS'],
-    website: 'https://zagros.pezkuwi.com'
+    website: 'https://zagros.pezkuwichain.io'
   },
   {
     decimals: [12],
@@ -35,7 +35,7 @@ const customNetworks: KnownBizinikiwi[] = [
     prefix: 42,
     standardAccount: '*25519',
     symbols: ['BZN'],
-    website: 'https://bizinikiwi.com'
+    website: 'https://bizinikiwi.pezkuwichain.io'
   },
   {
     decimals: [18],
@@ -44,7 +44,7 @@ const customNetworks: KnownBizinikiwi[] = [
     prefix: 1453,
     standardAccount: '*25519',
     symbols: ['PZC'],
-    website: 'https://chain.pezkuwi.com'
+    website: 'https://network.pezkuwichain.io'
   }
 ];
 
