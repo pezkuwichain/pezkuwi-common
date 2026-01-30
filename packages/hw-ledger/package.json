@@ -1,5 +1,5 @@
 {
-  "author": "Pezkuwi Team <team@pezkuwichain.app>",
+  "author": "Dijital Kurdistan Tech Institute <dev@pezkuwichain.io>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
   "engines": {
     "node": ">=18"
@@ -17,13 +17,11 @@
     "./cjs/packageDetect.js"
   ],
   "type": "module",
-  "version": "14.0.11",
+  "types": "./index.d.ts",
+  "version": "14.0.12",
   "main": "./cjs/index.js",
   "module": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
-    "./cjs/package.json": "./cjs/package.json",
-    "./cjs/*": "./cjs/*.js",
     ".": {
       "module": {
         "types": "./index.d.ts",
@@ -52,6 +50,8 @@
         "default": "./bundle.js"
       }
     },
+    "./cjs/*": "./cjs/*.js",
+    "./cjs/package.json": "./cjs/package.json",
     "./constants": {
       "module": {
         "types": "./constants.d.ts",
@@ -126,7 +126,7 @@
         "default": "./packageDetect.js"
       }
     },
-    "./packageInfo.js": {
+    "./packageInfo": {
       "module": {
         "types": "./packageInfo.d.ts",
         "default": "./packageInfo.js"
@@ -140,7 +140,7 @@
         "default": "./packageInfo.js"
       }
     },
-    "./packageInfo": {
+    "./packageInfo.js": {
       "module": {
         "types": "./packageInfo.d.ts",
         "default": "./packageInfo.js"
@@ -170,8 +170,8 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/hw-ledger-transports": "14.0.11",
-    "@pezkuwi/util": "14.0.11",
+    "@pezkuwi/hw-ledger-transports": "14.0.12",
+    "@pezkuwi/util": "14.0.12",
     "@zondax/ledger-substrate": "1.1.1",
     "tslib": "^2.8.0"
   }

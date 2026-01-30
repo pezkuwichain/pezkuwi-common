@@ -14,7 +14,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.10",
+  "version": "14.0.12",
   "versions": {
     "git": "14.0.8",
     "npm": "14.0.8"
@@ -37,12 +37,12 @@
     "test:one": "pezkuwi-dev-run-test --env browser"
   },
   "devDependencies": {
-    "@pezkuwi/dev": "0.85.4",
+    "@pezkuwi/dev": "^0.85.7",
     "@types/node": "^22.7.5"
   },
   "resolutions": {
-    "@pezkuwi/dev": "portal:../pezkuwi-dev/packages/dev",
-    "@pezkuwi/dev-test": "portal:../pezkuwi-dev/packages/dev-test",
+    "@pezkuwi/dev": "^0.85.7",
+    "@pezkuwi/dev-test": "^0.85.7",
     "typescript": "^5.5.4"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "author": "Pezkuwi Team <team@pezkuwichain.app>",
+  "author": "Dijital Kurdistan Tech Institute <dev@pezkuwichain.io>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
   "description": "A cross-environment window.crypto.getRandomValues replacement",
   "engines": {
@@ -15,15 +15,13 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "14.0.11",
+  "types": "./node.d.ts",
+  "version": "14.0.12",
+  "browser": "./cjs/browser.js",
   "main": "./cjs/node.js",
   "module": "./node.js",
-  "browser": "./cjs/browser.js",
   "react-native": "./cjs/react-native.js",
-  "types": "./node.d.ts",
   "exports": {
-    "./cjs/package.json": "./cjs/package.json",
-    "./cjs/*": "./cjs/*.js",
     ".": {
       "types": "./node.d.ts",
       "react-native": {
@@ -83,6 +81,8 @@
         "default": "./browser.js"
       }
     },
+    "./cjs/*": "./cjs/*.js",
+    "./cjs/package.json": "./cjs/package.json",
     "./fallback": {
       "module": {
         "types": "./fallback.d.ts",
@@ -115,7 +115,7 @@
       "require": "./cjs/package.json",
       "default": "./package.json"
     },
-    "./packageInfo.js": {
+    "./packageInfo": {
       "module": {
         "types": "./packageInfo.d.ts",
         "default": "./packageInfo.js"
@@ -129,7 +129,7 @@
         "default": "./packageInfo.js"
       }
     },
-    "./packageInfo": {
+    "./packageInfo.js": {
       "module": {
         "types": "./packageInfo.d.ts",
         "default": "./packageInfo.js"
@@ -157,7 +157,7 @@
         "default": "./react-native.js"
       }
     },
-    "./shim.js": {
+    "./shim": {
       "module": {
         "types": "./shim.d.ts",
         "default": "./shim.js"
@@ -171,7 +171,7 @@
         "default": "./shim.js"
       }
     },
-    "./shim": {
+    "./shim.js": {
       "module": {
         "types": "./shim.d.ts",
         "default": "./shim.js"
@@ -187,11 +187,14 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/x-global": "14.0.11",
+    "@pezkuwi/x-global": "14.0.12",
     "tslib": "^2.8.0"
   },
+  "devDependencies": {
+    "@types/react-native": "^0.73.0"
+  },
   "peerDependencies": {
-    "@pezkuwi/util": "14.0.11",
+    "@pezkuwi/util": "14.0.12",
     "@pezkuwi/wasm-util": "*"
   }
 }

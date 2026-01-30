@@ -1,5 +1,5 @@
 {
-  "author": "Pezkuwi Team <team@pezkuwichain.app>",
+  "author": "Dijital Kurdistan Tech Institute <dev@pezkuwichain.io>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
   "description": "A cross-environment BigInt replacement",
   "engines": {
@@ -18,13 +18,11 @@
     "./cjs/shim.js"
   ],
   "type": "module",
-  "version": "14.0.11",
+  "types": "./index.d.ts",
+  "version": "14.0.12",
   "main": "./cjs/index.js",
   "module": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
-    "./cjs/package.json": "./cjs/package.json",
-    "./cjs/*": "./cjs/*.js",
     ".": {
       "module": {
         "types": "./index.d.ts",
@@ -39,23 +37,11 @@
         "default": "./index.js"
       }
     },
+    "./cjs/*": "./cjs/*.js",
+    "./cjs/package.json": "./cjs/package.json",
     "./package.json": {
       "require": "./cjs/package.json",
       "default": "./package.json"
-    },
-    "./packageInfo.js": {
-      "module": {
-        "types": "./packageInfo.d.ts",
-        "default": "./packageInfo.js"
-      },
-      "require": {
-        "types": "./cjs/packageInfo.d.ts",
-        "default": "./cjs/packageInfo.js"
-      },
-      "default": {
-        "types": "./packageInfo.d.ts",
-        "default": "./packageInfo.js"
-      }
     },
     "./packageInfo": {
       "module": {
@@ -71,18 +57,18 @@
         "default": "./packageInfo.js"
       }
     },
-    "./shim.js": {
+    "./packageInfo.js": {
       "module": {
-        "types": "./shim.d.ts",
-        "default": "./shim.js"
+        "types": "./packageInfo.d.ts",
+        "default": "./packageInfo.js"
       },
       "require": {
-        "types": "./cjs/shim.d.ts",
-        "default": "./cjs/shim.js"
+        "types": "./cjs/packageInfo.d.ts",
+        "default": "./cjs/packageInfo.js"
       },
       "default": {
-        "types": "./shim.d.ts",
-        "default": "./shim.js"
+        "types": "./packageInfo.d.ts",
+        "default": "./packageInfo.js"
       }
     },
     "./shim": {
@@ -98,10 +84,24 @@
         "types": "./shim.d.ts",
         "default": "./shim.js"
       }
+    },
+    "./shim.js": {
+      "module": {
+        "types": "./shim.d.ts",
+        "default": "./shim.js"
+      },
+      "require": {
+        "types": "./cjs/shim.d.ts",
+        "default": "./cjs/shim.js"
+      },
+      "default": {
+        "types": "./shim.d.ts",
+        "default": "./shim.js"
+      }
     }
   },
   "dependencies": {
-    "@pezkuwi/x-global": "14.0.11",
+    "@pezkuwi/x-global": "14.0.12",
     "tslib": "^2.8.0"
   }
 }

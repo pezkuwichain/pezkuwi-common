@@ -47,7 +47,7 @@ describe('u8aToHex', (): void => {
   it('returns the hex value where allowed < max', (): void => {
     expect(
       u8aToHex(
-        new Uint8Array(Uint8Array.from([128, 0, 10, 11]), 64)
+        Uint8Array.from([128, 0, 10, 11])
       )
     ).toEqual('0x80000a0b');
   });
