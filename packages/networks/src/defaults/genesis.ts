@@ -154,9 +154,9 @@ export const knownGenesis: KnownGenesis = {
   polkadot: [
     '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'
   ],
-  // Pezkuwi - Pezkuwi main relay chain (placeholder until mainnet launch)
+  // Pezkuwi - Pezkuwi main relay chain (MAINNET - launched 2026-01-28)
   pezkuwi: [
-    '0x41693961995d879073269a008d0a52832caa3e0ae73869f02127f3d5daa4934c'
+    '0xbb4a61ab0c4b8c12f5eab71d0c86c482e03a275ecdafee678dea712474d33d75'
   ],
   polymesh: [
     '0x6fbd74e5e1d0a61d52ccfe9d4adaed16dd3a7caa37c6bc4d0c2fa12e8b2f4063'
