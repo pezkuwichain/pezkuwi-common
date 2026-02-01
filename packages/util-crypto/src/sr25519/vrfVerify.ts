@@ -1,7 +1,7 @@
 // Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import * as sr25519 from '@scure/sr25519';
+import * as sr25519 from '@pezkuwi/scure-sr25519';
 
 import { u8aToU8a } from '@pezkuwi/util';
 
