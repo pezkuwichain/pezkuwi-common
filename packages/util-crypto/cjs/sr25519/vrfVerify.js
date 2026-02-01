@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sr25519VrfVerify = sr25519VrfVerify;
 const tslib_1 = require("tslib");
-const sr25519 = tslib_1.__importStar(require("@scure/sr25519"));
+const sr25519 = tslib_1.__importStar(require("@pezkuwi/scure-sr25519"));
 const util_1 = require("@pezkuwi/util");
 const EMPTY_U8A = new Uint8Array();
 /**

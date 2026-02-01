@@ -16,7 +16,7 @@
   "sideEffects": false,
   "type": "module",
   "types": "./index.d.ts",
-  "version": "14.0.20",
+  "version": "14.0.23",
   "main": "./cjs/index.js",
   "module": "./index.js",
   "exports": {
@@ -182,11 +182,11 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/util": "14.0.20",
+    "@pezkuwi/util": "14.0.22",
     "@substrate/ss58-registry": "^1.51.0",
     "tslib": "^2.8.0"
   },
   "devDependencies": {
-    "@pezkuwi/hw-ledger": "14.0.20"
+    "@pezkuwi/hw-ledger": "14.0.22"
   }
 }

@@ -16,7 +16,7 @@
   "sideEffects": false,
   "type": "module",
   "types": "./node.d.ts",
-  "version": "14.0.20",
+  "version": "14.0.23",
   "browser": "./cjs/browser.js",
   "main": "./cjs/node.js",
   "module": "./node.js",
@@ -201,7 +201,7 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/x-global": "14.0.20",
+    "@pezkuwi/x-global": "14.0.22",
     "tslib": "^2.8.0"
   }
 }

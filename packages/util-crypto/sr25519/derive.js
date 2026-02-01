@@ -1,4 +1,4 @@
-import * as sr25519 from '@scure/sr25519';
+import * as sr25519 from '@pezkuwi/scure-sr25519';
 import { isU8a } from '@pezkuwi/util';
 export function createDeriveFn(derive) {
     return (keypair, chainCode) => {

@@ -19,7 +19,7 @@
   ],
   "type": "module",
   "types": "./index.d.ts",
-  "version": "14.0.20",
+  "version": "14.0.23",
   "main": "./cjs/index.js",
   "module": "./index.js",
   "exports": {
@@ -1987,15 +1987,15 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/x-bigint": "14.0.20",
-    "@pezkuwi/x-global": "14.0.20",
-    "@pezkuwi/x-textdecoder": "14.0.20",
-    "@pezkuwi/x-textencoder": "14.0.20",
+    "@pezkuwi/x-bigint": "14.0.23",
+    "@pezkuwi/x-global": "14.0.23",
+    "@pezkuwi/x-textdecoder": "14.0.23",
+    "@pezkuwi/x-textencoder": "14.0.23",
     "@types/bn.js": "^5.1.6",
     "bn.js": "^5.2.1",
     "tslib": "^2.8.0"
   },
   "devDependencies": {
-    "@pezkuwi/x-randomvalues": "14.0.20"
+    "@pezkuwi/x-randomvalues": "14.0.23"
   }
 }

@@ -19,7 +19,7 @@
   ],
   "type": "module",
   "types": "./index.d.ts",
-  "version": "14.0.20",
+  "version": "14.0.23",
   "main": "./cjs/index.js",
   "module": "./index.js",
   "exports": {
@@ -101,7 +101,7 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/x-global": "14.0.20",
+    "@pezkuwi/x-global": "14.0.22",
     "tslib": "^2.8.0"
   }
 }

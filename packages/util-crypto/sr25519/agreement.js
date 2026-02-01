@@ -1,4 +1,4 @@
-import { getSharedSecret } from '@scure/sr25519';
+import { getSharedSecret } from '@pezkuwi/scure-sr25519';
 import { u8aToU8a } from '@pezkuwi/util';
 /**
  * @name sr25519Agreement

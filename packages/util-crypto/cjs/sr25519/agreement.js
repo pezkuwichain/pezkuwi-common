@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sr25519Agreement = sr25519Agreement;
-const sr25519_1 = require("@scure/sr25519");
+const sr25519_1 = require("@pezkuwi/scure-sr25519");
 const util_1 = require("@pezkuwi/util");
 /**
  * @name sr25519Agreement

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.sr25519VrfSign = sr25519VrfSign;
 const tslib_1 = require("tslib");
 const utils_1 = require("@noble/hashes/utils");
-const sr25519 = tslib_1.__importStar(require("@scure/sr25519"));
+const sr25519 = tslib_1.__importStar(require("@pezkuwi/scure-sr25519"));
 const util_1 = require("@pezkuwi/util");
 const EMPTY_U8A = new Uint8Array();
 /**

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sr25519DerivePublic = sr25519DerivePublic;
 const tslib_1 = require("tslib");
-const sr25519 = tslib_1.__importStar(require("@scure/sr25519"));
+const sr25519 = tslib_1.__importStar(require("@pezkuwi/scure-sr25519"));
 const util_1 = require("@pezkuwi/util");
 function sr25519DerivePublic(publicKey, chainCode) {
     const publicKeyU8a = (0, util_1.u8aToU8a)(publicKey);

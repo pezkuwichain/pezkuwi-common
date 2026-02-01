@@ -1,4 +1,4 @@
-import * as sr25519 from '@scure/sr25519';
+import * as sr25519 from '@pezkuwi/scure-sr25519';
 import { isU8a, u8aToU8a } from '@pezkuwi/util';
 export function sr25519DerivePublic(publicKey, chainCode) {
     const publicKeyU8a = u8aToU8a(publicKey);

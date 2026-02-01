@@ -19,7 +19,7 @@
   ],
   "type": "module",
   "types": "./index.d.ts",
-  "version": "14.0.20",
+  "version": "14.0.23",
   "main": "./cjs/index.js",
   "module": "./index.js",
   "exports": {
@@ -283,12 +283,12 @@
     }
   },
   "dependencies": {
-    "@pezkuwi/util": "14.0.20",
-    "@pezkuwi/util-crypto": "14.0.20",
+    "@pezkuwi/util": "14.0.23",
+    "@pezkuwi/util-crypto": "14.0.23",
     "tslib": "^2.8.0"
   },
   "peerDependencies": {
-    "@pezkuwi/util": "14.0.20",
-    "@pezkuwi/util-crypto": "14.0.20"
+    "@pezkuwi/util": "14.0.23",
+    "@pezkuwi/util-crypto": "14.0.23"
   }
 }
