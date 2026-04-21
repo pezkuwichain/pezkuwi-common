@@ -1,17 +1,17 @@
 {
   "author": "Dijital Kurdistan Tech Institute <dev@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-common/issues",
   "description": "A collection of useful utilities for @pezkuwi",
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-common/tree/master/packages/util#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-common/tree/master/packages/util#readme",
   "license": "Apache-2.0",
   "name": "@pezkuwi/util",
   "repository": {
     "directory": "packages/util",
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-common.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-common.git"
   },
   "sideEffects": [
     "./packageDetect.js",

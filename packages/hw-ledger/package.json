@@ -1,16 +1,16 @@
 {
   "author": "Dijital Kurdistan Tech Institute <dev@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-common/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-common/issues",
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-common/tree/master/packages/hw-ledger#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-common/tree/master/packages/hw-ledger#readme",
   "license": "Apache-2.0",
   "name": "@pezkuwi/hw-ledger",
   "repository": {
     "directory": "packages/hw-ledger",
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-common.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-common.git"
   },
   "sideEffects": [
     "./packageDetect.js",
