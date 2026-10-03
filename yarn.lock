@@ -1240,14 +1240,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/scure-sr25519@portal:/home/mamostehp/pezkuwi-wasm/packages/scure-sr25519::locator=root-workspace-0b6124%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@pezkuwi/scure-sr25519@portal:/home/mamostehp/pezkuwi-wasm/packages/scure-sr25519::locator=root-workspace-0b6124%40workspace%3A."
+"@pezkuwi/scure-sr25519@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@pezkuwi/scure-sr25519@npm:0.2.1"
   dependencies:
     "@noble/curves": "npm:~1.9.2"
     "@noble/hashes": "npm:~1.8.0"
+  checksum: 10/91ad6aeac9c5cfd1527e33f263527d3a69458f17c62975e994a0a936b9c54715c0573564401ac70b5ff344a6bdcf36cb118ec8a359e714d77d9e0cb40db68f64
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@pezkuwi/util-crypto@npm:14.0.23, @pezkuwi/util-crypto@workspace:packages/util-crypto":
   version: 0.0.0-use.local

@@ -43,7 +43,6 @@
   "resolutions": {
     "@pezkuwi/dev": "^0.85.11",
     "@pezkuwi/dev-test": "^0.85.7",
-    "@pezkuwi/scure-sr25519": "portal:/home/mamostehp/pezkuwi-wasm/packages/scure-sr25519",
     "@pezkuwi/wasm-bridge": "7.5.17",
     "@pezkuwi/wasm-crypto": "7.5.17",
     "@pezkuwi/wasm-crypto-asmjs": "7.5.17",
