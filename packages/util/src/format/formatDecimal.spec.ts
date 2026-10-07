@@ -25,4 +25,21 @@ describe('formatDecimal', (): void => {
   it('formats negative numbers', (): void => {
     expect(formatDecimal('-123456')).toEqual('-123,456');
   });
+
+  // The pattern this replaced took quadratic time on a long digit run
+  // (CodeQL js/polynomial-redos): 60k digits took seconds; this is linear.
+  it('formats a very long number quickly', (): void => {
+    const start = Date.now();
+    const out = formatDecimal(`1${'0'.repeat(60_000)}`);
+
+    expect(Date.now() - start < 1000).toEqual(true);
+    expect(out.length).toEqual(60_001 + 20_000);
+    expect(out.startsWith('1,000,000')).toEqual(true);
+  });
+
+  it('keeps the grouping of the pattern it replaced', (): void => {
+    expect(formatDecimal('ab123cd')).toEqual('ab123cd');
+    expect(formatDecimal('12a3456')).toEqual('3,456');
+    expect(formatDecimal('1000000', '_')).toEqual('1_000_000');
+  });
 });
