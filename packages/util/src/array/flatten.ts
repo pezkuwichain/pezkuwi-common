@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @pezkuwi/util authors & contributors
+// Copyright 2017-2026 @pezkuwi/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // This is supposed to be a faster concat...
