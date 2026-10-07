@@ -5,8 +5,6 @@ build-*/
 coverage/
 node_modules/
 tmp/
-/import_map.json
-/mod.ts
 .DS_Store
 .env.local
 .env.development.local
