@@ -1,10 +1,9 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Keypair } from '../types.js';
 
 import * as sr25519 from '@pezkuwi/scure-sr25519';
-
 import { isU8a } from '@pezkuwi/util';
 
 export function createDeriveFn (derive: (pair: Uint8Array, cc: Uint8Array) => Uint8Array): (keypair: Keypair, chainCode: Uint8Array) => Keypair {

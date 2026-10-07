@@ -1,11 +1,11 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Keypair } from '../types.js';
 
 import { randomBytes } from '@noble/hashes/utils';
-import * as sr25519 from '@pezkuwi/scure-sr25519';
 
+import * as sr25519 from '@pezkuwi/scure-sr25519';
 import { u8aToU8a } from '@pezkuwi/util';
 
 const EMPTY_U8A = new Uint8Array();

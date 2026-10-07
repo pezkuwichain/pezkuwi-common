@@ -1,8 +1,7 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import * as sr25519 from '@pezkuwi/scure-sr25519';
-
 import { isU8a, u8aToU8a } from '@pezkuwi/util';
 
 export function sr25519DerivePublic (publicKey: string | Uint8Array, chainCode: Uint8Array): Uint8Array {
