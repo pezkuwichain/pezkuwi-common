@@ -11,14 +11,21 @@ import { secp256k1Sign } from '../secp256k1/sign.js';
 import { signatureVerify } from './index.js';
 
 const ADDR_ED = 'DxN4uvzwPzJLtn17yew6jEffPhXQfdKHTp2brufb98vGbPN';
-const ADDR_SR = 'EK1bFgKm2FsghcttHT7TB7rNyXApFgs9fCbijMGQNyFGBQm';
-const ADDR_SR_WRAP = 'J9nD3s7zssCX7bion1xctAF6xcVexcpy2uwy4jTm9JL8yuK';
+// sr25519 here signs under the bizinikiwi context, so these were made with it:
+// sr25519PairFromSeed(blake2AsU8a(stringToU8a(<label>), 256)) for the labels
+// 'pezkuwi sr25519 test key' and 'pezkuwi sr25519 wrapped test key', checked
+// against both the JS (scure-sr25519) and the wasm (Rust) implementation.
+const ADDR_SR = 'GU1xgEzaDdP1GqmVG9fS92gGmFEtC1ABKVSrvy5MxwzsdkZ';
+const ADDR_SR_WRAP = 'DbFJ1cLKaKqXZDErLNcRb3XR8jpa3Ffch6jAaqSzjShESQR';
+// The upstream vector, signed under the substrate context: it must not verify.
+const ADDR_SR_SUBSTRATE = 'EK1bFgKm2FsghcttHT7TB7rNyXApFgs9fCbijMGQNyFGBQm';
 const ADDR_EC = 'XyFVXiGaHxoBhXZkSh6NS2rjFyVaVNUo5UiZDqZbuSfUdji';
 const ADDR_ET = '0x54Dab85EE2c7b9F7421100d7134eFb5DfA4239bF';
 const MESSAGE = 'hello world';
 const SIG_ED = '0x299d3bf4c8bb51af732f8067b3a3015c0862a5ff34721749d8ed6577ea2708365d1c5f76bd519009971e41156f12c70abc2533837ceb3bad9a05a99ab923de06';
-const SIG_SR = '0xca01419b5a17219f7b78335658cab3b126db523a5df7be4bfc2bef76c2eb3b1dcf4ca86eb877d0a6cf6df12db5995c51d13b00e005d053b892bd09c594434288';
-const SIG_SR_WRAP = '0x84b6afb1c8e54bbcb3f4872baf172580e21310e9387a53742627d6652d121447fa406b82805ed3184fb7bd519175cc9f99f283f97954d95cf966ee164df85489';
+const SIG_SR = '0x1ac2b19ac70b5fc7d9254ed3b534eadfbbe4ba098d01fb58cdfb1d2ad93b741fa5130871a936181dbcf1931df2d3174c6ad85195a56844682beb74f178138085';
+const SIG_SR_WRAP = '0xb2f55395d3931087c2d12ff54e56b1e21cd0ba65b10348780996c3583179f5596796373393608eeff052dbfa94352415f2fa39b3d80e4d51dc8c44bc5f2da384';
+const SIG_SR_SUBSTRATE = '0xca01419b5a17219f7b78335658cab3b126db523a5df7be4bfc2bef76c2eb3b1dcf4ca86eb877d0a6cf6df12db5995c51d13b00e005d053b892bd09c594434288';
 const SIG_EC = '0x994638ee586d2c5dbd9bacacbc35d9b7e9018de8f7892f00c900db63bc57b1283e2ee7bc51a9b1c1dae121ac4f4b9e2a41cd1d6bf4bb3e24d7fed6faf6d85e0501';
 const SIG_ET = '0x4e35aad35793b71f08566615661c9b741d7c605bc8935ac08608dff685324d71b5704fbd14c9297d2f584ea0735f015dcf0def66b802b3f555e1db916eda4b7700';
 const MUL_ED = u8aToHex(u8aConcat(new Uint8Array([0]), hexToU8a(SIG_ED)));
@@ -86,6 +93,15 @@ describe('signatureVerify', (): void => {
         isValid: false,
         isWrapped: false,
         publicKey: hexToU8a(ADDR_ET)
+      });
+    });
+
+    it('does not verify an sr25519 signature made under the substrate context', (): void => {
+      expect(signatureVerify(MESSAGE, SIG_SR_SUBSTRATE, ADDR_SR_SUBSTRATE)).toEqual({
+        crypto: 'none',
+        isValid: false,
+        isWrapped: false,
+        publicKey: decodeAddress(ADDR_SR_SUBSTRATE)
       });
     });
 
