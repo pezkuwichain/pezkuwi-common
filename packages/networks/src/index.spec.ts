@@ -3,19 +3,12 @@
 
 /// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
-import type { BizinikwiNetwork } from './types.js';
-
 import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/index.js';
 import { allNetworks, availableNetworks, selectableNetworks } from './index.js';
 
 describe('availableNetworks', (): void => {
-  it('has the correct starting order', (): void => {
-    expect(availableNetworks.slice(0, 3).map(({ prefix }) => prefix)).toEqual([0, 2, 42]);
-  });
-
-  it('has a sorted list (first external, last external)', (): void => {
-    expect(availableNetworks[3].displayName).toEqual('3DP network');
-    expect(availableNetworks[availableNetworks.length - 1].displayName).toEqual('ZERO');
+  it('lists the Pezkuwi networks first, in their declared order', (): void => {
+    expect(availableNetworks.map(({ network }) => network)).toEqual(['pezkuwi', 'zagros', 'bizinikiwi']);
   });
 
   it('has no ignored networks', (): void => {
@@ -70,51 +63,52 @@ describe('availableNetworks', (): void => {
     ).toEqual([]);
   });
 
-  it('has all the correct fields', (): void => {
-    expect(availableNetworks[0]).toEqual({
-      decimals: [10],
-      displayName: 'Polkadot Relay Chain',
-      genesisHash: [
-        '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'
-      ],
-      hasLedgerSupport: true,
-      icon: 'polkadot',
-      isIgnored: false,
-      isTestnet: false,
-      network: 'polkadot',
-      prefix: 0,
-      slip44: 354,
-      standardAccount: '*25519',
-      symbols: ['DOT'],
-      website: 'https://polkadot.network'
-    });
+  // What the nodes report (system_properties) and what a wallet formats
+  // addresses with must agree: ss58Format 42, HEZ, 12 decimals.
+  it('gives the Pezkuwi chains the format their nodes report', (): void => {
+    for (const network of ['pezkuwi', 'zagros']) {
+      const n = availableNetworks.find((a) => a.network === network);
+
+      expect(n && { decimals: n.decimals, prefix: n.prefix, symbols: n.symbols }).toEqual({
+        decimals: [12],
+        prefix: 42,
+        symbols: ['HEZ']
+      });
+    }
+  });
+
+  it('knows Zagros by its genesis, and not the mainnet while it is relaunched', (): void => {
+    expect(availableNetworks.find((a) => a.network === 'zagros')?.genesisHash).toEqual([
+      '0x1b0b4727bbb5e44ed587d1056b4ad537ffb330034509a58866a088d77e792cd5'
+    ]);
+    expect(availableNetworks.find((a) => a.network === 'pezkuwi')?.genesisHash).toEqual([]);
   });
 });
 
 describe('allNetworks', (): void => {
-  it('has no ss58 duplicates', (): void => {
-    const dupes: BizinikwiNetwork[] = [];
-    const uniques: BizinikwiNetwork[] = [];
+  // Upstream's registry gives every prefix to one network. The Pezkuwi chains
+  // share the generic format 42 by design; any other prefix stays unique.
+  it('shares an ss58 prefix only at 42', (): void => {
+    const seen = new Map<number, string[]>();
 
-    allNetworks.forEach((a): void => {
-      if (uniques.some((u) => u.prefix === a.prefix)) {
-        dupes.push(a);
-      } else {
-        uniques.push(a);
-      }
+    allNetworks.forEach(({ network, prefix }): void => {
+      seen.set(prefix, [...(seen.get(prefix) || []), network]);
     });
 
-    expect(dupes).toEqual([]);
+    expect([...seen.entries()].filter(([prefix, networks]) => prefix !== 42 && networks.length > 1)).toEqual([]);
+  });
+
+  it('has no two networks claiming one genesis', (): void => {
+    const hashes = allNetworks.flatMap(({ genesisHash }) => genesisHash);
+
+    expect(hashes.length).toEqual(new Set(hashes).size);
   });
 });
 
 describe('selectableNetworks', (): void => {
-  it('has the correct starting order', (): void => {
-    expect(selectableNetworks.slice(0, 3).map(({ prefix }) => prefix)).toEqual([0, 2, 42]);
-  });
-
-  it('has a sorted list (first external, last external)', (): void => {
-    expect(selectableNetworks[3].displayName).toEqual('3DP network');
-    expect(selectableNetworks[selectableNetworks.length - 1].displayName).toEqual('Zeitgeist');
+  // selectable = has a genesis, or uses the generic format 42; every Pezkuwi
+  // network uses 42, so the mainnet stays selectable while it has no genesis
+  it('offers every Pezkuwi network', (): void => {
+    expect(selectableNetworks.map(({ network }) => network)).toEqual(['pezkuwi', 'zagros', 'bizinikiwi']);
   });
 });

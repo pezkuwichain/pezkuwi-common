@@ -5,27 +5,29 @@ import type { BizinikwiNetwork, KnownBizinikiwi, Network } from './types.js';
 
 import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/index.js';
 
-// These are known prefixes that are not sorted
-const UNSORTED = [0, 2, 42];
+// Prefixes kept in their declared order at the head of the list
+const UNSORTED = [42];
 const TESTNETS = ['testnet'];
 
 const customNetworks: KnownBizinikiwi[] = [
+  // The Pezkuwi chains encode addresses with the generic prefix 42, the format
+  // their nodes report (system_properties: ss58Format 42, HEZ, 12 decimals).
   {
-    decimals: [10],
+    decimals: [12],
     displayName: 'Pezkuwi Relay Chain',
     network: 'pezkuwi',
-    prefix: 0,
+    prefix: 42,
     standardAccount: '*25519',
-    symbols: ['PZW'],
+    symbols: ['HEZ'],
     website: 'https://pezkuwichain.io'
   },
   {
     decimals: [12],
     displayName: 'Zagros Relay Chain',
     network: 'zagros',
-    prefix: 2,
+    prefix: 42,
     standardAccount: '*25519',
-    symbols: ['ZGS'],
+    symbols: ['HEZ'],
     website: 'https://zagros.pezkuwichain.io'
   },
   {
@@ -36,15 +38,6 @@ const customNetworks: KnownBizinikiwi[] = [
     standardAccount: '*25519',
     symbols: ['BZN'],
     website: 'https://bizinikiwi.pezkuwichain.io'
-  },
-  {
-    decimals: [18],
-    displayName: 'PezkuwiChain',
-    network: 'pezkuwichain',
-    prefix: 1453,
-    standardAccount: '*25519',
-    symbols: ['PZC'],
-    website: 'https://network.pezkuwichain.io'
   }
 ];
 
