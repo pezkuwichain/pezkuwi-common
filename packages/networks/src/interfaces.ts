@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @pezkuwi/networks authors & contributors
+// Copyright 2017-2026 @pezkuwi/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { KnownBizinikiwi, Network, BizinikwiNetwork } from './types.js';
+import type { BizinikwiNetwork, KnownBizinikiwi, Network } from './types.js';
 
 import { knownGenesis, knownIcon, knownLedger, knownTestnet } from './defaults/index.js';
 
