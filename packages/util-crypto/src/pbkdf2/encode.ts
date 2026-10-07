@@ -1,8 +1,8 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { pbkdf2 as pbkdf2Js } from '@noble/hashes/pbkdf2';
-import { sha512 } from '@noble/hashes/sha512';
+import { sha512 } from '@noble/hashes/sha2';
 
 import { hasBigInt, u8aToU8a } from '@pezkuwi/util';
 import { isReady, pbkdf2 } from '@pezkuwi/wasm-crypto';

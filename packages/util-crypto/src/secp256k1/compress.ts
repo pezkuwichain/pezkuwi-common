@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { secp256k1 } from '@noble/curves/secp256k1';
@@ -17,5 +17,5 @@ export function secp256k1Compress (publicKey: Uint8Array, onlyJs?: boolean): Uin
 
   return !hasBigInt || (!onlyJs && isReady())
     ? wasm(publicKey)
-    : secp256k1.ProjectivePoint.fromHex(publicKey).toRawBytes(true);
+    : secp256k1.Point.fromHex(publicKey).toBytes(true);
 }
