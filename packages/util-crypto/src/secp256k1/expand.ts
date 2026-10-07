@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { secp256k1 } from '@noble/curves/secp256k1';
@@ -21,7 +21,7 @@ export function secp256k1Expand (publicKey: Uint8Array, onlyJs?: boolean): Uint8
     return wasm(publicKey).subarray(1);
   }
 
-  const { px, py } = secp256k1.ProjectivePoint.fromHex(publicKey);
+  const { x: px, y: py } = secp256k1.Point.fromHex(publicKey).toAffine();
 
   return u8aConcat(
     bnToU8a(px, BN_BE_256_OPTS),

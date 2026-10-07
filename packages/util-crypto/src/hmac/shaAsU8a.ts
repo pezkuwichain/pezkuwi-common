@@ -1,9 +1,8 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { hmac } from '@noble/hashes/hmac';
-import { sha256 } from '@noble/hashes/sha256';
-import { sha512 } from '@noble/hashes/sha512';
+import { sha256, sha512 } from '@noble/hashes/sha2';
 
 import { hasBigInt, u8aToU8a } from '@pezkuwi/util';
 import { hmacSha256, hmacSha512, isReady } from '@pezkuwi/wasm-crypto';

@@ -1,7 +1,7 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { blake2b as blake2bJs } from '@noble/hashes/blake2b';
+import { blake2b as blake2bJs } from '@noble/hashes/blake2';
 
 import { hasBigInt, u8aToU8a } from '@pezkuwi/util';
 import { blake2b, isReady } from '@pezkuwi/wasm-crypto';

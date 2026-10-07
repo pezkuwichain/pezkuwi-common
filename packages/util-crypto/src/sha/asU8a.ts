@@ -1,8 +1,7 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { sha256 as sha256Js } from '@noble/hashes/sha256';
-import { sha512 as sha512Js } from '@noble/hashes/sha512';
+import { sha256 as sha256Js, sha512 as sha512Js } from '@noble/hashes/sha2';
 
 import { sha256, sha512 } from '@pezkuwi/wasm-crypto';
 

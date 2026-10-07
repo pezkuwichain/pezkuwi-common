@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @pezkuwi/util-crypto authors & contributors
+// Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { HashType } from './types.js';
@@ -21,10 +21,15 @@ export function secp256k1Recover (msgHash: string | Uint8Array, signature: strin
   const publicKey = !hasBigInt || (!onlyJs && isReady())
     ? wasm(msg, sig, recovery)
     : secp256k1.Signature
-      .fromCompact(sig)
+      .fromBytes(sig, 'compact')
       .addRecoveryBit(recovery)
+      // The replacement, secp256k1.recoverPublicKey(bytes, msg), exists at run
+      // time in @noble/curves 1.9 but not in its types (secp256k1 is still
+      // typed as the legacy CurveFn); 2.x has it typed but is ESM-only, which
+      // would break this package's CommonJS build. Kept until then.
+      // eslint-disable-next-line deprecation/deprecation
       .recoverPublicKey(msg)
-      .toRawBytes();
+      .toBytes();
 
   if (!publicKey) {
     throw new Error('Unable to recover publicKey from signature');
