@@ -11,6 +11,9 @@ import type { KnownGenesis } from '../types.js';
 // IMPORTANT: Apart from the test relays, this list is limited to live parachains
 // and live production  networks. It does not and should not contain any testnets,
 // either stand-alone or connected to test relays such as Westend/Rococo
+// pezkuwi (the mainnet relay) has no entry while the chain is relaunched from
+// genesis: a stale hash would identify a chain that no longer exists, and an
+// absent one leaves the app to read the connected node.
 export const knownGenesis: KnownGenesis = {
   acala: [
     '0xfc41b9bd8ef8fe53d58c7ea67c794c7ec9a73daf05e6d54b14ff6342c99ba64c'
@@ -60,9 +63,6 @@ export const knownGenesis: KnownGenesis = {
   'dock-mainnet': [
     '0x6bfe24dca2a3be10f22212678ac13a6446ec764103c0f3471c71609eac384aae',
     '0xf73467c6544aa68df2ee546b135f955c46b90fa627e9b5d7935f41061bb8a5a9'
-  ],
-  dicle: [
-    '0xd9d3cd7c1e5d890d969b957f4c5b71a111bbeeabc968f1d0d4538c2663f080a7'
   ],
   edgeware: [
     '0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b'
@@ -138,12 +138,6 @@ export const knownGenesis: KnownGenesis = {
   pendulum: [
     '0x5d3c298622d5634ed019bf61ea4b71655030015bde9beb0d6a24743714462c86'
   ],
-  pezkuwi: [
-    '0xbb4a61ab0c4b8c12f5eab71d0c86c482e03a275ecdafee678dea712474d33d75'
-  ],
-  pezkuwichain: [
-    '0x32154fd2c844f928c82964ff66168b41b15fc235f3a956d14393734c1ed4326b'
-  ],
   phala: [
     '0x1bb969d85965e4bb5a651abbedf21a54b6b31a21f66b5401cc3f1e286268d736'
   ],
@@ -218,7 +212,7 @@ export const knownGenesis: KnownGenesis = {
     '0x50dd5d206917bf10502c68fb4d18a59fc8aa31586f4e8856b493e43544aa82aa'
   ],
   zagros: [
-    '0x297f5a4d105b4b28312586ff1915572ffe4ee015ff772b76399ecbff25a22026'
+    '0x1b0b4727bbb5e44ed587d1056b4ad537ffb330034509a58866a088d77e792cd5'
   ],
   zeitgeist: [
     '0x1bf2a2ecb4a868de66ea8610f2ce7c8c43706561b6476031315f6640fe38e060'
