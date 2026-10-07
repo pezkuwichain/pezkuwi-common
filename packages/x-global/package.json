@@ -15,60 +15,8 @@
   },
   "sideEffects": false,
   "type": "module",
-  "types": "./index.d.ts",
-  "version": "14.0.23",
-  "main": "./cjs/index.js",
-  "module": "./index.js",
-  "exports": {
-    ".": {
-      "module": {
-        "types": "./index.d.ts",
-        "default": "./index.js"
-      },
-      "require": {
-        "types": "./cjs/index.d.ts",
-        "default": "./cjs/index.js"
-      },
-      "default": {
-        "types": "./index.d.ts",
-        "default": "./index.js"
-      }
-    },
-    "./cjs/*": "./cjs/*.js",
-    "./cjs/package.json": "./cjs/package.json",
-    "./package.json": {
-      "require": "./cjs/package.json",
-      "default": "./package.json"
-    },
-    "./packageInfo": {
-      "module": {
-        "types": "./packageInfo.d.ts",
-        "default": "./packageInfo.js"
-      },
-      "require": {
-        "types": "./cjs/packageInfo.d.ts",
-        "default": "./cjs/packageInfo.js"
-      },
-      "default": {
-        "types": "./packageInfo.d.ts",
-        "default": "./packageInfo.js"
-      }
-    },
-    "./packageInfo.js": {
-      "module": {
-        "types": "./packageInfo.d.ts",
-        "default": "./packageInfo.js"
-      },
-      "require": {
-        "types": "./cjs/packageInfo.d.ts",
-        "default": "./cjs/packageInfo.js"
-      },
-      "default": {
-        "types": "./packageInfo.d.ts",
-        "default": "./packageInfo.js"
-      }
-    }
-  },
+  "version": "14.0.26",
+  "main": "index.js",
   "dependencies": {
     "tslib": "^2.8.0"
   }
