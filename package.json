@@ -28,7 +28,6 @@
     "build:release": "pezkuwi-ci-ghact-build",
     "build:rollup": "pezkuwi-exec-rollup --config",
     "clean": "pezkuwi-dev-clean-build",
-    "deno": "yarn pezkuwi-dev-deno-map && yarn build && deno check --import-map=import_map.json mod.ts",
     "lint": "pezkuwi-dev-run-lint",
     "postinstall": "pezkuwi-dev-yarn-only",
     "test": "pezkuwi-dev-run-test --env browser ^mnemonic/toMiniSecretCmp",
