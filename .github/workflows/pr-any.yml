@@ -3,8 +3,8 @@ on: [pull_request]
 
 jobs:
   pr:
-    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
         step: ['lint', 'test', 'build', 'deno']
     runs-on: ubuntu-latest
@@ -26,3 +26,9 @@ jobs:
         deno --version
         yarn install --immutable
         yarn ${{ matrix.step }}
+    # The package.json each build/ directory holds is what npm receives: every
+    # entry point must name a file that is there, with no ./build/ or ./cjs/cjs/
+    # path and no string spread into exports (the January 2026 fault).
+    - name: check built manifests
+      if: matrix.step == 'build'
+      run: python3 scripts/check-built-manifests.py .
