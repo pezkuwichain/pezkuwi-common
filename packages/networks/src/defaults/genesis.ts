@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @pezkuwi/networks authors & contributors
+// Copyright 2017-2026 @pezkuwi/networks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { KnownGenesis } from '../types.js';
@@ -61,6 +61,9 @@ export const knownGenesis: KnownGenesis = {
     '0x6bfe24dca2a3be10f22212678ac13a6446ec764103c0f3471c71609eac384aae',
     '0xf73467c6544aa68df2ee546b135f955c46b90fa627e9b5d7935f41061bb8a5a9'
   ],
+  dicle: [
+    '0xd9d3cd7c1e5d890d969b957f4c5b71a111bbeeabc968f1d0d4538c2663f080a7'
+  ],
   edgeware: [
     '0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b'
   ],
@@ -108,9 +111,6 @@ export const knownGenesis: KnownGenesis = {
     '0x3fd7b9eb6a00376e5be61f01abb429ffb0b104be05eaff4d458da48fcd425baf' // Kusama CC1
   ],
   // Dicle - Pezkuwi canary relay chain (placeholder until mainnet launch)
-  dicle: [
-    '0xd9d3cd7c1e5d890d969b957f4c5b71a111bbeeabc968f1d0d4538c2663f080a7'
-  ],
   liberland: [
     '0x6bd89e052d67a45bb60a9a23e8581053d5e0d619f15cb9865946937e690c42d6'
   ],
@@ -138,6 +138,12 @@ export const knownGenesis: KnownGenesis = {
   pendulum: [
     '0x5d3c298622d5634ed019bf61ea4b71655030015bde9beb0d6a24743714462c86'
   ],
+  pezkuwi: [
+    '0xbb4a61ab0c4b8c12f5eab71d0c86c482e03a275ecdafee678dea712474d33d75'
+  ],
+  pezkuwichain: [
+    '0x32154fd2c844f928c82964ff66168b41b15fc235f3a956d14393734c1ed4326b'
+  ],
   phala: [
     '0x1bb969d85965e4bb5a651abbedf21a54b6b31a21f66b5401cc3f1e286268d736'
   ],
@@ -155,9 +161,6 @@ export const knownGenesis: KnownGenesis = {
     '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'
   ],
   // Pezkuwi - Pezkuwi main relay chain (MAINNET - launched 2026-01-28)
-  pezkuwi: [
-    '0xbb4a61ab0c4b8c12f5eab71d0c86c482e03a275ecdafee678dea712474d33d75'
-  ],
   polymesh: [
     '0x6fbd74e5e1d0a61d52ccfe9d4adaed16dd3a7caa37c6bc4d0c2fa12e8b2f4063'
   ],
@@ -179,9 +182,6 @@ export const knownGenesis: KnownGenesis = {
     '0x19c0e4fa8ab75f5ac7865e0b8f74ff91eb9a100d336f423cd013a8befba40299'
   ],
   // PezkuwiChain - Pezkuwi dev relay chain (placeholder until devnet launch)
-  pezkuwichain: [
-    '0x32154fd2c844f928c82964ff66168b41b15fc235f3a956d14393734c1ed4326b'
-  ],
   sora: [
     '0x7e4e32d0feafd4f9c9414b0be86373f9a1efa904809b683453a9af6856d38ad5'
   ],
@@ -214,11 +214,11 @@ export const knownGenesis: KnownGenesis = {
     '0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e'
   ],
   // Zagros - Pezkuwi test relay chain (placeholder until testnet launch)
-  zagros: [
-    '0x297f5a4d105b4b28312586ff1915572ffe4ee015ff772b76399ecbff25a22026'
-  ],
   xxnetwork: [
     '0x50dd5d206917bf10502c68fb4d18a59fc8aa31586f4e8856b493e43544aa82aa'
+  ],
+  zagros: [
+    '0x297f5a4d105b4b28312586ff1915572ffe4ee015ff772b76399ecbff25a22026'
   ],
   zeitgeist: [
     '0x1bf2a2ecb4a868de66ea8610f2ce7c8c43706561b6476031315f6640fe38e060'
