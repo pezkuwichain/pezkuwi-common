@@ -67,7 +67,7 @@ function formatWithLength (maxLength: number): (v: unknown) => unknown {
 
 function apply (log: LogType, type: string, values: unknown[], maxSize = -1): void {
   if (values.length === 1 && isFunction(values[0])) {
-    const fnResult = values[0]() as unknown;
+    const fnResult = (values[0] as () => unknown)();
 
     return apply(log, type, Array.isArray(fnResult) ? fnResult : [fnResult], maxSize);
   }

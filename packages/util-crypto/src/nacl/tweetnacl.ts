@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/util-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* eslint-disable brace-style,camelcase,comma-spacing,curly,one-var,padding-line-between-statements,space-infix-ops */
+/* eslint-disable @stylistic/brace-style, camelcase, @stylistic/comma-spacing, curly, one-var, @stylistic/padding-line-between-statements, @stylistic/space-infix-ops */
 
 // Adapted from https://github.com/dchest/tweetnacl-js/blob/6a9594a35a27f9c723c5f1c107e376d1c65c23b3/nacl.js
 //

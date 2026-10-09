@@ -48,13 +48,9 @@ export const xglobal = /*#__PURE__*/ (
  * Extracts a known global from the environment, applying a fallback if not found
  */
 export function extractGlobal <N extends GlobalNames, T extends GlobalType<N>> (name: N, fallback: unknown): T {
-  // Not quite sure why this is here - snuck in with TS 4.7.2 with no real idea
-  // (as of now) as to why this looks like an "any" when we do cast it to a T
-  //
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return typeof xglobal[name] === 'undefined'
     ? fallback as T
-    : xglobal[name] as T;
+    : xglobal[name];
 }
 
 /**

@@ -7,7 +7,7 @@ import { encodeAddress, setSS58Format } from './index.js';
 
 describe('setSS58Format', (): void => {
   beforeEach((): void => {
-    // eslint-disable-next-line deprecation/deprecation
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
     setSS58Format(2);
   });
 

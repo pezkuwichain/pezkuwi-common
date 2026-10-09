@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 type FnType = Function;
 
 /**

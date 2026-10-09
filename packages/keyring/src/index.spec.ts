@@ -49,7 +49,7 @@ describe('keypair', (): void => {
     });
 
     it('adds from a mnemonic, with correct ss58', (): void => {
-      // eslint-disable-next-line deprecation/deprecation
+      // eslint-disable-next-line @typescript-eslint/no-deprecated
       setSS58Format(20); // this would not be used
       keyring.setSS58Format(2); // this would be used
 

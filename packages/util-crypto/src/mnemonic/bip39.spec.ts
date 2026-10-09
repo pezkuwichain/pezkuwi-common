@@ -46,7 +46,7 @@ describe('bip39', (): void => {
         split
       ).toHaveLength(length);
       expect(
-        split.some((w) => words.indexOf(w) === -1)
+        split.some((w) => !words.includes(w))
       ).toEqual(false);
     };
 

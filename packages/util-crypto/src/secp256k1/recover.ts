@@ -27,7 +27,7 @@ export function secp256k1Recover (msgHash: string | Uint8Array, signature: strin
       // time in @noble/curves 1.9 but not in its types (secp256k1 is still
       // typed as the legacy CurveFn); 2.x has it typed but is ESM-only, which
       // would break this package's CommonJS build. Kept until then.
-      // eslint-disable-next-line deprecation/deprecation
+      // eslint-disable-next-line @typescript-eslint/no-deprecated
       .recoverPublicKey(msg)
       .toBytes();
 

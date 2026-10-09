@@ -11,7 +11,7 @@ interface Options {
  * @description Converts a float into a U8a representation (While we don't use BE in SCALE
  * we still allow for either representation, although, as elsewhere, isLe is default)
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-wrapper-object-types
 export function floatToU8a (value: String | string | number | Number = 0.0, { bitLength = 32, isLe = true }: Options = {}): Uint8Array {
   if (bitLength !== 32 && bitLength !== 64) {
     throw new Error('Invalid bitLength provided, expected 32 or 64');

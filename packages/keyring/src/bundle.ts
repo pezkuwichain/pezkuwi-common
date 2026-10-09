@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // all external
-// eslint-disable-next-line deprecation/deprecation
+// eslint-disable-next-line @typescript-eslint/no-deprecated
 export { decodeAddress, encodeAddress, setSS58Format } from '@pezkuwi/util-crypto';
 
 // all named

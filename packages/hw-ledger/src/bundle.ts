@@ -3,6 +3,6 @@
 
 // This is necessary to ensure users still have access to class Ledger even though its deprecated.
 //
-// eslint-disable-next-line deprecation/deprecation
+// eslint-disable-next-line @typescript-eslint/no-deprecated
 export { Ledger } from './Ledger.js';
 export { LedgerGeneric } from './LedgerGeneric.js';

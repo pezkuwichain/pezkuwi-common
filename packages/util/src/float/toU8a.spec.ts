@@ -16,7 +16,7 @@ class ExtString extends String {
 
 // NOTE Hex value outputs created via online conversion tool:
 // https://www.h-schmidt.net/FloatConverter/IEEE754.html
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-wrapper-object-types
 const TESTS: [isLe: boolean | undefined, bitLength: 32 | 64 | undefined, input: String | string | number | Number, output: string][] = [
   [undefined, undefined, +0.0, '0x00000000'],
   [undefined, undefined, -0.0, '0x00000080'],
