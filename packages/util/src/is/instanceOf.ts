@@ -15,7 +15,7 @@
  * console.log('isInstanceOf', isInstanceOf(new Array(0), Array)); // => true
  * ```
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function isInstanceOf (value: unknown, Clazz: Function): boolean {
   return (
     ((value && (value as Record<string, unknown>).constructor) === Clazz) ||

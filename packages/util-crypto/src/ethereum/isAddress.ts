@@ -6,7 +6,7 @@ import { isHex } from '@pezkuwi/util';
 import { isEthereumChecksum } from './isChecksum.js';
 
 export function isEthereumAddress (address?: string): boolean {
-  if (!address || address.length !== 42 || !isHex(address)) {
+  if (address?.length !== 42 || !isHex(address)) {
     return false;
   } else if (/^(0x)?[0-9a-f]{40}$/.test(address) || /^(0x)?[0-9A-F]{40}$/.test(address)) {
     return true;
