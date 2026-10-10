@@ -15,15 +15,6 @@ import { crypto as cryptoBrowser, getRandomValues as getRandomValuesBrowser } fr
 
 export { packageInfo } from './packageInfo.js';
 
-interface RNExt {
-  ExpoRandom: {
-    getRandomBase64String: (length: number) => string;
-  };
-  RNGetRandomValues: {
-    getRandomBase64: (length: number) => string;
-  }
-}
-
 /**
  * @internal
  *
@@ -31,20 +22,19 @@ interface RNExt {
  * random utiliy generation functions.
  **/
 function getRandomValuesRn (output: Uint8Array): Uint8Array {
-  if (!NativeModules['ExpoRandom'] && !(NativeModules as RNExt).RNGetRandomValues) {
-    throw new Error('No secure random number generator available. This environment does not support crypto.getRandomValues and no React Native secure RNG module is available.');
+  const { ExpoRandom, RNGetRandomValues } = NativeModules;
+
+  if (RNGetRandomValues) {
+    return base64Decode(RNGetRandomValues.getRandomBase64(output.length), output);
+  } else if (ExpoRandom) {
+    return base64Decode(ExpoRandom.getRandomBase64String(output.length), output);
   }
 
-  return base64Decode(
-    (NativeModules as RNExt).RNGetRandomValues
-      ? (NativeModules as RNExt).RNGetRandomValues.getRandomBase64(output.length)
-      : (NativeModules as RNExt).ExpoRandom.getRandomBase64String(output.length),
-    output
-  );
+  throw new Error('No secure random number generator available. This environment does not support crypto.getRandomValues and no React Native secure RNG module is available.');
 }
 
 // Check for native RN modules first (highest priority)
-const hasNativeRNModules = !!NativeModules['ExpoRandom'] || !!(NativeModules as RNExt).RNGetRandomValues;
+const hasNativeRNModules = !!NativeModules.ExpoRandom || !!NativeModules.RNGetRandomValues;
 const hasNativeCrypto = typeof xglobal.crypto === 'object' && typeof xglobal.crypto.getRandomValues === 'function';
 
 export const getRandomValues = (
