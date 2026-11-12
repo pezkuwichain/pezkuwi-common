@@ -73,13 +73,13 @@ yarn build
 
 ## Tutorials
 
-Looking for tutorials? Check out [examples](https://js.pezkuwichain.app/docs/keyring/) for guides on how to use these utilities.
+Looking for tutorials? Check out [examples](https://developers.pezkuwichain.io) for guides on how to use these utilities.
 
 ## Links
 
 - Website: https://pezkuwichain.io
 - Documentation: https://docs.pezkuwichain.io
-- API Docs: https://js.pezkuwichain.app
+- API Docs: https://developers.pezkuwichain.io
 - GitHub: https://github.com/pezkuwichain
 
 ## License

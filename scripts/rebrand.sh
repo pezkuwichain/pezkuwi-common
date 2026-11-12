@@ -44,7 +44,7 @@ find .github -type f -name "*.yml" -exec sed -i 's/polkadot-js\/common/pezkuwich
 
 # 7. Update author info
 echo "👤 Updating author info..."
-sed -i 's/"author": "Jaco Greeff.*"/"author": "Pezkuwi Team <team@pezkuwichain.app>"/g' package.json
+sed -i 's/"author": "Jaco Greeff.*"/"author": "Pezkuwi Team <team@pezkuwichain.io>"/g' package.json
 sed -i 's/"homepage":.*/"homepage": "https:\/\/github.com\/pezkuwichain\/pezkuwi-common#readme",/g' package.json
 
 echo "✅ Rebrand complete!"
